@@ -1,0 +1,43 @@
+html, body {
+    height: 100vh;
+}
+
+/* Screen size 320px */
+
+body {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+}
+
+header {
+    background-color: #040d0d;
+}
+
+footer {
+    background-color: #5c7489
+}
+
+.max-width {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Screen size 750px */
+
+@media (min-width: 750px) {
+    
+}
+
+/* Screen size 980px*/
+
+@media (min-width: 980px) {
+    
+}
+
+/* Screen size 1140px */
+
+@media (min-width: 1140px) {
+    .max-width {
+        width: 1140px;
+    }
+}
