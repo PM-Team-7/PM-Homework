@@ -57,6 +57,18 @@ footer {
     background-color: #5c7489
 }
 
+header {
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 1em 0 0;
+}
+
 /* Screen size 750px */
 
 @media (min-width: 750px) {
