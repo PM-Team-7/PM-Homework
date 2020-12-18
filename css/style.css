@@ -73,6 +73,10 @@ footer {
 /* Screen size 1140px */
 
 @media (min-width: 1140px) {
+    .max-width {
+        width: 1140px;
+    }
+
     .wide {
         display: flex;
     }
