@@ -8,7 +8,10 @@ html, body {
 body {
     display: grid;
     grid-template-rows: 40px 1fr 40px;
+
     font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
 }
 
 .max-width {
@@ -16,14 +19,12 @@ body {
     margin: 0 auto;
 }
 
-header {
+nav {
     background-color: #040d0d;
-    padding-left: 4%;
-    padding-right: 4%;
     color: white;
 }
 
-header a, .wide, .shrink {
+nav a, .wide, .shrink {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -38,19 +39,17 @@ header a, .wide, .shrink {
     display: none;
 }
 
-header a {
+nav a {
     color: #bcc3c5;
     text-decoration: none;
-    font-size: 15px;
-    font-weight: 300;
     cursor: pointer;
 }
 
-header .menu-icon {
+nav .menu-icon {
     margin-right: 5px;
 }
 
-header a:hover {
+nav a:hover {
     color: #fff;
 }
 
@@ -85,16 +84,16 @@ footer {
         display: none;
     }
 
-    header a {
+    nav a {
         justify-content: center;
         position: relative;
     }
 
-    header a, header .dropdown {
+    nav a, nav .dropdown {
         height: 25px;
     }
 
-    header a:before {
+    nav a:before {
         content: "";
         position: absolute;
         width: 0;
@@ -106,12 +105,12 @@ footer {
         transition: all 0.3s ease-in-out;
     }
 
-    header a:hover:before {
+    nav a:hover:before {
         visibility: visible;
         width: 100%;
     }
 
-    header a .arrow-down {
+    nav a .arrow-down {
         width: 20px;
         height: 20px;
         margin-left: 5px;
