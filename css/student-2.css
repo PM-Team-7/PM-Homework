@@ -1,0 +1,96 @@
+/* Screen size 320px */
+
+/* Block 2 */
+
+.header__top {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 1em 0 0;
+}
+
+.header__top .city, 
+.header__top .cabinet,
+.header__top .login {
+    cursor: pointer;
+    color: #4673ab;
+}
+
+.header__top .login {
+    margin-right: 0.3em;
+}
+
+.header__top .login, .header__top .slash {
+    display: none;
+}
+
+.header__main {
+    margin-top: 1.5em;
+    display: flex;
+
+    flex-direction: column;
+}
+
+.header__main .logo {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #040d0d;
+    font-size: 1.8em;
+    font-weight: lighter;
+}
+
+.logo__text div {
+    display: inline-block;
+
+    margin: 0 3px;
+    padding: 4px 5px;
+}
+
+.logo_tagline {
+    font-size: 1em;
+}
+
+.dotted {
+    border-bottom: 2px red dashed;
+}
+
+/* Block 5 */
+
+.widget {
+    display: block;
+    margin-top: 1.5em;
+    padding: 0.8em 0.4em;
+
+    border-radius: 0.8em;
+
+    background-color: #e3e5eb;
+    font-style: italic;
+    text-align: center;
+
+    display: none;
+}
+
+.widget span {
+    color:#4673ab;
+}
+
+/* Screen size 750px */
+
+@media (min-width: 750px) {
+    .widget {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Screen size 980px*/
+
+@media (min-width: 980px) {
+
+}
+
+/* Screen size 1140px */
+
+@media (min-width: 1140px) {
+    
+}
