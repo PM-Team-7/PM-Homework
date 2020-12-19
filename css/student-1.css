@@ -7,7 +7,7 @@ html, body {
 
 body {
     display: grid;
-    grid-template-rows: 1.1fr 14fr 1.1fr;
+    grid-template-rows: 40px 14fr 40px;
 
     font-family: 'Roboto', sans-serif;
     font-size: 15px;
