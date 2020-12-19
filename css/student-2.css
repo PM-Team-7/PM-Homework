@@ -1,5 +1,48 @@
 /* Screen size 320px */
 
+/* Default block */
+
+.block {
+    height: 400px;
+    margin-top: 1.2em;
+
+    border-radius: 0.8em;
+}
+
+.block:last-child {
+    margin-bottom: 1.2em;
+}
+
+.topic {
+    display: flex;
+
+    width: 100%;
+    height: 1.5em;
+
+    justify-content: space-between;
+    align-items: center;
+
+    background: url(../resources/icon/border.gif) center center repeat-x;
+}
+
+.white-line {
+    background: url(../resources/icon/border_w.gif) center center repeat-x;
+}
+
+.topic b {
+    padding-right: 1em;
+
+    background-color: #ffffff;
+
+    font-size: 1.5em;
+}
+
+.topic a {
+    padding-left: 1em;
+
+    background-color: #ffffff;
+}
+
 /* Block 2 */
 
 .header__top {
@@ -28,7 +71,12 @@
     margin-top: 1.5em;
     display: flex;
 
-    flex-direction: column;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.header__main > * {
+    width: 40%;
 }
 
 .header__main .logo {
@@ -46,8 +94,12 @@
     padding: 4px 5px;
 }
 
-.logo_tagline {
-    font-size: 1em;
+.logo__tagline {
+    font-size: 0.5em;
+}
+
+.contacts .contacts__recall {
+    text-align: center;
 }
 
 .dotted {
@@ -57,8 +109,9 @@
 /* Block 5 */
 
 .widget {
-    display: block;
-    margin-top: 1.5em;
+    display: none;
+
+    margin-top: 1.2em;
     padding: 0.8em 0.4em;
 
     border-radius: 0.8em;
@@ -66,20 +119,61 @@
     background-color: #e3e5eb;
     font-style: italic;
     text-align: center;
-
-    display: none;
 }
 
 .widget span {
     color:#4673ab;
 }
 
+/* Block 6 */
+#main-slider-wrap {
+    display: none;
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    
+    margin-top: 1.2em;
+
+    border-radius: 0.8em;
+    background-color: chocolate;
+}
+
+#main-slider-wrap .left-arr, #main-slider-wrap .right-arr {
+    position: absolute;
+
+    top: 50%;
+
+    width: 20px;
+    height: 20px;
+
+    background-color: brown;
+}
+
+#main-slider-wrap .left-arr {
+    left: 5%;
+}
+
+#main-slider-wrap .right-arr {
+    right: 5%;
+}
+
 /* Screen size 750px */
 
 @media (min-width: 750px) {
-    .widget {
-        width: 100%;
+    .widget, #main-slider-wrap {
         display: block;
+    }
+
+    .header__top .login, .header__top .slash {
+        display: inline;
+    }
+
+    .header__main {
+        flex-direction: row;
+    }
+
+    .header__main > * {
+        width: 20%;
     }
 }
 
