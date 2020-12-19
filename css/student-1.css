@@ -19,6 +19,8 @@ body {
     margin: 0 auto;
 }
 
+/* Block-1 */
+
 nav {
     background-color: #040d0d;
     color: white;
@@ -86,6 +88,8 @@ footer {
     .max-width {
         width: 1140px;
     }
+
+    /* Block-1 */
 
     .wide {
         display: flex;
