@@ -377,7 +377,8 @@
 
 @media (min-width: 980px) {
     .block.buy--now .items > div {
-        width: 23%;
+        max-width: 23%;
+        width: auto;
     }
 
     .block.buy--now .items > div:nth-child(-n+4) {
