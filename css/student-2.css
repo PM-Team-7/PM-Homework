@@ -3,17 +3,9 @@
 /* Default block */
 
 .block {
-    margin-top: 1.2em;
+    margin: 2.5em 0;
 
     border-radius: 0.8em;
-}
-
-.block:last-child {
-    margin-bottom: 1.2em;
-}
-
-.block.widget {
-    padding: 1.5em;
 }
 
 .topic {
@@ -38,14 +30,6 @@
     background-color: #ffffff;
     
     font-size: 1.5em;
-}
-
-.block.widget {
-    font-style: normal;
-}
-
-.block.widget .topic b {
-    background-color: #e3e5eb;
 }
 
 .topic a {
@@ -102,7 +86,11 @@
     display: inline-block;
 
     margin: 0 3px;
-    padding: 4px 5px;
+    padding: 3px 4px;
+
+    color: #ff6837;
+    background: linear-gradient(217deg, rgb(171, 155, 155), rgb(255, 255, 255), rgb(236, 220, 220)70.71%);
+    border-radius: 5px;
 }
 
 .logo__tagline {
@@ -146,7 +134,11 @@
     margin-top: 1.2em;
 
     border-radius: 0.8em;
-    background-color: chocolate;
+}
+
+#main-slider-wrap .slider {
+    width: 100%;
+    height: 100%;
 }
 
 #main-slider-wrap .left-arr, #main-slider-wrap .right-arr {
@@ -170,21 +162,84 @@
     background: url(../resources/icon/arrow-right.svg) center center;
 }
 
+#main-slider-wrap .slider .slide {
+    width: 100%;
+    height: 100%;
+
+    background: url(../resources/image/block-6-background.png) center center no-repeat;
+    background-size: cover;
+}
+
+/* Block 11 */
+
+.buy--now {
+    display: none;
+}
+
+.buy--now .items {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 2em;
+}
+
+.buy--now .items > div {
+    display: none;
+    width: 30%;
+}
+
+.buy--now .items > div:nth-child(-n+3) {
+    display: block;
+}
+
+.buy--now .items > div img {
+    margin-bottom: 1.5em;
+    width: 200px;
+    height: 200px;
+}
+
+.buy--now .items > div a {
+    display: block;
+}
+
+/* Block 12 */
+
+.brands {
+    display: none;
+}
+
+.brands img {
+    width: 100%;
+    margin-top: 2.5em;
+}
+
 /* Block 13 */
 
-.block.widget .widget--items {
+.block.widget {
+    padding: 2em;
+}
+
+.block.widget {
+    font-style: normal;
+}
+
+.block.widget .topic b {
+    background-color: #e3e5eb;
+}
+
+.block.widget .items {
     display: flex;
     justify-content: space-around;
 
-    margin-top: 1.5em;
+    margin-top: 2em;
 }
 
-.block.widget .widget--items > div {
+.block.widget .items > div {
     width: 20%;
     text-align: center;
 }
 
-.block.widget .widget--items > div figure {
+.block.widget .items > div figure {
     width: 100px;
     height: 100px;
 
@@ -194,14 +249,114 @@
     background-color: white;
 }
 
-.block.widget .widget--items > div figure img {
+.block.widget .items > div figure img {
     margin-top: 25%;
+}
+
+/* Block 14 */
+
+.reasons {
+    display: none;
+}
+
+.reasons__main {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+}
+
+.reasons__main {
+    margin-top: 2em;
+}
+
+.reasons__main .good_reasons, .reasons__main .bad_reasons {
+    width: 48%;
+    position: relative;
+}
+
+.reasons__main .good_reasons > h2, .reasons__main .bad_reasons > h2 {
+    height: 5.5em;
+
+    border-top-left-radius: 0.8em;
+    border-top-right-radius: 0.8em;
+
+    padding: 2em 1em 2em 1em;
+    color: white;
+}
+
+.reasons__main .good_reasons > ul, .reasons__main .bad_reasons > ul {
+    display: block;
+    list-style: none;
+
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+    
+    margin-inline-start: -10px;
+    margin-inline-end: 10px;
+    padding-inline-start: 40px;
+}
+
+.reasons__main ul li {
+    margin-bottom: 1em;
+}
+
+.reasons__main .good_reasons > ul li::before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    color: #16a333;
+}
+
+.reasons__main .bad_reasons > ul li::before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    color: #cb0b13;
+}
+
+.reasons__main .good_reasons > h2 {
+    padding-top: 2.3em;
+    background-color: #16a333;
+}
+
+.reasons__main .bad_reasons > h2 {
+    padding-top: 1.5em;
+    background-color: #cb0b13;
+}
+
+.reasons__main .bad_reasons:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0.8em;
+    box-shadow: 0px 0px 0px 2px #cb0b13 inset;
+}
+
+.reasons__main .good_reasons:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0.8em;
+    box-shadow: 0px 0px 0px 2px #16a333 inset;
 }
 
 /* Screen size 750px */
 
 @media (min-width: 750px) {
-    .widget, #main-slider-wrap {
+    .widget, #main-slider-wrap, .brands, .reasons, .buy--now {
         display: block;
     }
 
@@ -221,7 +376,13 @@
 /* Screen size 980px*/
 
 @media (min-width: 980px) {
+    .block.buy--now .items > div {
+        width: 23%;
+    }
 
+    .block.buy--now .items > div:nth-child(-n+4) {
+        display: block;
+    }
 }
 
 /* Screen size 1140px */
