@@ -65,6 +65,85 @@ nav a:hover {
     color: #fff;
 }
 
+#new, #recommendation, #sale, #promotion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0;
+}
+
+/* Block 7 */
+
+#new .new__instance {
+    width: 20%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#new .new__instance > img {
+    display: block;
+    margin: 20px auto;
+}
+
+#new .new__instance a {
+    color: #4673ab;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+#new .new__instance p {
+    margin: 10px 0;
+}
+
+#new .new__instance p .bold {
+    font-weight: 500;
+    font-size: 19px;
+}
+
+#new .new__instance p .crossed {
+    color: #ff6837;
+    text-decoration: line-through;
+    margin-left: 5px;
+    font-size: 13px;
+}
+
+#new .new__instance .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#new .new__instance .bottom button {
+    /*width: 40%;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 4% 7%;
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #ff6837;
+    border: 1px solid #ff6837;
+    border-bottom: #c44817 3px solid;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+#new .new__instance .bottom button .cart {
+    margin-right: 5px;
+}
+
+#new .new__instance .bottom a {
+    font-weight: 300;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+
 footer {
     background-color: #5c7489
 }
@@ -90,7 +169,6 @@ footer {
     }
 
     /* Block-1 */
-
     .wide {
         display: flex;
     }
@@ -145,7 +223,7 @@ footer {
         background-color: #f9f9f9;
         min-width: 170px;
         max-width: 230px;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
         z-index: 1;
     }
 
