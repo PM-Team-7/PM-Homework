@@ -67,39 +67,34 @@ nav a:hover {
 }
 
 #new, #recommendation, #sale, #promotion {
-    width: 100%;
+    width: 96%;
     height: 100%;
-    padding: 2% 0;
-
-    /*display: flex;*/
-    /*justify-content: space-around;*/
-    /*align-items: center;*/
+    padding: 2%;
 }
 
 /* Block 7 */
 
-.new__carousel, .new__heading {
+.new__carousel, .new__heading, #new .instances, #new .instance .bottom button {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .new__heading h2 {
-    font-size: 26px;
+    font-size: 1.6em;
     font-weight: 500;
 }
 
 .new__heading hr {
-    width: 80%;
+    width: 75%;
+    margin: 0 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-
 .new__heading a {
     color: #4673ab;
-    font-size: 13px;
+    font-size: 0.8em;
 }
-
 
 #new .arrow-left, #new .arrow-right {
     width: 20px;
@@ -107,19 +102,19 @@ nav a:hover {
 
 #new .instances {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
-
 
 #new .instance {
     height: 150%;
-    /*width: 20%;*/
+    padding: 2% 1%;
+    margin: 1.5%;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    padding: 2% 1%;
-    margin: 15px;
+}
+
+#new .instance:hover {
+    transition: .3s;
+    border-color: #ff6837;
 }
 
 #new .instance > img {
@@ -131,7 +126,7 @@ nav a:hover {
 #new .instance a {
     color: #4673ab;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 1em;
     cursor: pointer;
 }
 
@@ -158,11 +153,6 @@ nav a:hover {
 }
 
 #new .instance .bottom button {
-    /*width: 40%;*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     padding: 4% 7%;
     color: #ffffff;
     font-weight: 600;
@@ -174,14 +164,21 @@ nav a:hover {
     cursor: pointer;
 }
 
+#new .instance .bottom button:hover {
+    transition: .3s;
+    background-color: #4673ab;
+    border-color: #4673ab;
+    border-bottom-color: #284263;
+}
+
 #new .new__instance .bottom button .cart {
     margin-right: 5px;
 }
 
 #new .new__instance .bottom a {
     font-weight: 300;
-    font-size: 14px;
-    margin-right: 5px;
+    font-size: 0.6em;
+    margin-right: 2%;
 }
 
 
