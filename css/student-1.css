@@ -1,6 +1,7 @@
 html, body {
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Screen size 320px */
@@ -16,7 +17,7 @@ body {
 
 .max-width {
     width: 100%;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
 }
 
 /* Block-1 */
@@ -66,57 +67,97 @@ nav a:hover {
 }
 
 #new, #recommendation, #sale, #promotion {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    height: 100%;
     padding: 2% 0;
+
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+    /*align-items: center;*/
 }
 
 /* Block 7 */
 
-#new .new__instance {
-    width: 20%;
-    height: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+.new__carousel, .new__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new__heading h2 {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.new__heading hr {
+    width: 80%;
+    border-top: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+
+.new__heading a {
+    color: #4673ab;
+    font-size: 13px;
+}
+
+
+#new .arrow-left, #new .arrow-right {
+    width: 20px;
+}
+
+#new .instances {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#new .instance {
+    height: 150%;
+    /*width: 20%;*/
+    border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 10px;
-    padding: 10px;
+    padding: 2% 1%;
+    margin: 15px;
 }
 
-#new .new__instance > img {
+#new .instance > img {
     display: block;
-    margin: 20px auto;
+    height: 150px;
+    margin: 25px auto;
 }
 
-#new .new__instance a {
+#new .instance a {
     color: #4673ab;
     font-weight: 500;
     font-size: 17px;
     cursor: pointer;
 }
 
-#new .new__instance p {
-    margin: 10px 0;
+#new .instance p {
+    margin: 20px 0;
 }
 
-#new .new__instance p .bold {
+#new .instance p .bold {
     font-weight: 500;
     font-size: 19px;
 }
 
-#new .new__instance p .crossed {
+#new .instance p .crossed {
     color: #ff6837;
     text-decoration: line-through;
     margin-left: 5px;
     font-size: 13px;
 }
 
-#new .new__instance .bottom {
+#new .instance .bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#new .new__instance .bottom button {
+#new .instance .bottom button {
     /*width: 40%;*/
     display: flex;
     justify-content: space-between;
