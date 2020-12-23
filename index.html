@@ -94,45 +94,52 @@
                     <div class="logo__text">
                         HO<div>MY</div>RU
                     </div>
-                    <div class="logo__tagline">
+                    <div class="logo__tagline hide-before-750">
                         ОБОРУДОВАНИЕ И РЕШЕНИЯ ДЛЯ VOIP
                     </div>
                 </a>
                 <div class="contacts">
-                    <div class="contacts__recall">
+                    <div class="contacts__recall hide-before-980">
                         <span class="dotted">ОБРАТНЫЙ</span><br><span class="dotted">ЗВОНОК</span>
                     </div> 
                     <div class="contacts__phone">
-                        <p>
-                            +7 (495) 2-55-44-66
+                        <p class="phone-main">
+                            +7 495 2-55-44-66
                         </p>
-                        <p>(пн-пт с 9 до 18 ч)</p>
-                    </div>
-                    <div class="contacts__media">
+                        <p class="hide-before-750">(пн-пт с 9 до 18 ч)</p>
+                        <img src="resources/icon/viber.svg" height="16" alt="Viber">
                         <img src="resources/icon/whatsup.svg" alt="Whatsapp">
-                        <img src="resources/icon/skype.svg" alt="Skype">
-                        +7 (903) 1-11-11-11
+                        <p class="phone-secondary">
+                            +7 903 1-11-11-11
+                        </p>
                     </div>
                     <div class="contacts__email">
-                        <a href="mailto:info@homy.ru">info@homy.ru</a>
+                        <a href="#">info@homy.ru</a><br>
+                        <img src="resources/icon/skype.svg" alt="Viber">
+                        skype-on.06
                     </div>
                 </div>
                 <div class="search">
-                    <div class="search__top">
+                    <a class="icon search--icon hide-before-750 hide-after-1140"></a>
+                    <div class="search__top hide-before-1140">
                         <span>VOIP РЕШЕНИЯ</span>
                         ДЛЯ ЭКОНОМНЫХ ЛЮДЕЙ
                     </div>
-                    <div class="search__bar">
+                    <div class="search__bar hide-before-1140">
                         <input type="text" name="" id="">
                         <input type="button" value="искать">
                     </div>
                 </div>
                 <div class="basket">
                     <div class="basket__top">
-
+                        <a class="icon search--icon hide-after-750"></a>
+                        <a class="icon basket--icon"></a>
+                        <b>КОРЗИНА</b><br>
+                        <span>100</span> / 4000р.
                     </div>
                     <div class="basket__bottom">
-
+                        <a href="#"><img src="" alt="">Избранное<span></span></a>
+                        <a href="#"><img src="" alt="">Сравнение<span></span></a>
                     </div>
                 </div>
             </div>
@@ -190,7 +197,7 @@
         <!--Block-11-->
         <section class="block buy--now hide-before-750">
             <div class="topic">
-                <b>ЧТО ПОКУПАЮТ ПРЯМО ЧЕЙЧАС</b>
+                <b class="left">ЧТО ПОКУПАЮТ ПРЯМО ЧЕЙЧАС</b>
             </div>
             <div class="items">
                 <div>
@@ -214,11 +221,13 @@
         <!--Block-12-->
         <section class="block brands hide-before-750">
             <div class="topic">
-                <b>НАШИ КЛЮЧЕВЫЕ БРЕНДЫ</b>
-                <a href="#">Все бренды</a>
-                <div>
-                    <figure></figure>
-                    <figure></figure>
+                <b class="left">НАШИ КЛЮЧЕВЫЕ БРЕНДЫ</b>
+                <div class="right">
+                    <a class="hide-i-before-1140" href="#">Все бренды</a>
+                    <div class="arrows hide-after-1140">
+                        <figure class="prev"></figure>
+                        <figure class="next"></figure>
+                    </div>
                 </div>
             </div>
             <img src="resources/image/block-12-brands.png" alt="Бренды">
@@ -226,7 +235,7 @@
         <!--Block-13-->
         <section class="block widget hide-before-750">
             <div class="topic white-line">
-                <b>НАШИ СИЛЬНЫЕ СТОРОНЫ</b>
+                <b class="left">НАШИ СИЛЬНЫЕ СТОРОНЫ</b>
             </div>
             <div class="items">
                 <div>
@@ -258,7 +267,7 @@
         <!--Block-14-->
         <section class="block reasons hide-before-750">
             <div class="topic">
-                <b>5 ПРИЧИН ВЫБРАТЬ НАШУ КОМПАНИЮ</b>
+                <b class="left">5 ПРИЧИН ВЫБРАТЬ НАШУ КОМПАНИЮ</b>
             </div>
             <div class="reasons__main items">
                 <div class="bad_reasons">
@@ -306,7 +315,13 @@
         <!--Block-15-->
         <section class="block numbers hide-before-750">
             <div class="topic">
-                <b>МЫ В ЦИФРАХ</b>
+                <b class="left">МЫ В ЦИФРАХ</b>
+                <div class="right hide-after-980">
+                    <div class="arrows">
+                        <figure class="prev"></figure>
+                        <figure class="next"></figure>
+                    </div>
+                </div>
             </div>
             <div class="items">
                 <div>
@@ -350,7 +365,7 @@
         <!--Block-16-->
         <section class="block how--work">
             <div class="topic">
-                <b>КАК С НАМИ РАБОТАТЬ</b>
+                <b class="left">КАК С НАМИ РАБОТАТЬ</b>
             </div>
             <div class="how--work__top items">
                 <div>
@@ -368,17 +383,17 @@
             </div>
             <div class="how--work__bottom items">
                 <div>
-                    <figure class="car"></figure>
+                    <figure class="phone"></figure>
                     <div><b>1.</b> Обращение через сайт / по телефону</div>
                 </div>
                 <figure></figure>
                 <div>
-                    <figure class="phone"></figure>
+                    <figure class="tick"></figure>
                     <div><b>2.</b> Подтверждение заказа</div>
                 </div>
                 <figure></figure>
                 <div>
-                    <figure class="tick"></figure>
+                    <figure class="car"></figure>
                     <div><b>3.</b> Доставка товара</div>
                 </div>
                 <figure></figure>
