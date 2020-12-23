@@ -290,6 +290,14 @@
     color: white;
 }
 
+.reasons__main .bad_reasons > h2::before {
+    display: block;
+    content: " ";
+
+    background: url(../resources/image/block-6-background.png) center center no-repeat;
+    background-size: cover;
+}
+
 .reasons__main .good_reasons > h2::before {
     display: block;
     content: " ";
@@ -385,8 +393,8 @@
 }
 
 .numbers .items > div figure {
-    width: 20vh;
-    height: 20vh;
+    width: 150px;
+    height: 150px;
 
     margin: 0 auto 16px;
     padding-top: 35px;
@@ -406,7 +414,7 @@
 }
 
 .numbers .items > div:nth-child(3) figure {
-    padding-top: 35px;
+    padding-top: 30px;
     font-size: 2em;
 }
 
@@ -543,6 +551,8 @@
     
     .how--work__top > div, .how--work__bottom > div {
         width: 20%;
+
+        margin-bottom: 0;
     }
 
     .how--work__bottom > figure {
@@ -599,20 +609,20 @@
     }
 
     .numbers .items > div figure {
-        width: 18vh;
-        height: 18vh;
+        width: 125px;
+        height: 125px;
     }
 
     .numbers .items > div figure {
-        padding-top: 30px;
+        padding-top: 25px;
     }
     
     .numbers .items > div:nth-child(2) figure {
-        padding-top: 45px;
+        padding-top: 35px;
     }
     
     .numbers .items > div:nth-child(3) figure {
-        padding-top: 25px;
+        padding-top: 20px;
     }
 
     .how--work__top > div {
