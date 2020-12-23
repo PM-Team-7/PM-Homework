@@ -179,13 +179,45 @@
 }
 
 #main-slider-wrap .slider .slide {
-    padding: 5%;
+    padding: 5% 7%;
 
     width: 100%;
     height: 100%;
 
     background: url(../resources/image/block-6-background.png) center center no-repeat;
     background-size: cover;
+
+    color: white;
+}
+
+#main-slider-wrap .slider .slide h2 {
+    margin-bottom: 0.5em;
+
+    font-size: 1.5em;
+}
+
+#main-slider-wrap .slider .slide h2:first-child {
+    margin-bottom: 0.5em;
+
+    color: #ff6837;
+    font-size: 2em;
+}
+
+#main-slider-wrap .slider .slide ul {
+    display: block;
+    list-style: disc;
+
+    margin-block-start: 2em;
+    margin-block-end: 2em;
+    
+    margin-inline-start: -10px;
+    margin-inline-end: 10px;
+    padding-inline-start: 40px;
+    padding-inline-end: -40px;
+}
+
+#main-slider-wrap .slider .slide ul > li {
+    margin-bottom: 1em;
 }
 
 #main-slider-wrap .slider .slide .details {
