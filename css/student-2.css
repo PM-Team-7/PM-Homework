@@ -148,8 +148,18 @@
     justify-content: space-between;
 }
 
-.contacts__recall {
+.header__main .contacts > .contacts__recall {
+    width: 130px;
+
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-right: 10px;
+
     text-align: center;
+    line-height: 1.5em;
+    font-size: 0.8em;
+
+    background: url(../resources/image/cloud.png) center center no-repeat;
 }
 
 .contacts__phone .phone-main {
@@ -264,15 +274,14 @@
     color: white;
 }
 
-.main-slider-wrap .slider .slide h2 {
+.main-slider-wrap .slider .slide p:nth-child(-n+2) {
     margin-bottom: 0.5em;
 
     font-size: 1.5em;
+    font-weight: 400;
 }
 
-.main-slider-wrap .slider .slide h2:first-child {
-    margin-bottom: 0.5em;
-
+.main-slider-wrap .slider .slide p:first-child {
     color: #ff6837;
     font-size: 2em;
 }
@@ -350,7 +359,7 @@
     font-style: normal;
 }
 
-.block.widget .topic b {
+.block.widget .topic h2 {
     background-color: #e3e5eb;
 }
 
@@ -699,6 +708,7 @@
 
     .header__main {
         grid-template-areas: "logo contacts search basket";
+        grid-template-columns: 1.1fr 1.3fr 0.3fr 1fr;
     }
 
     .header__main .logo__text {
@@ -708,6 +718,7 @@
 
     .header__main .contacts {
         flex-direction: column;
+        justify-content: flex-start;
     }
 
     .header__main .contacts > * {
@@ -723,16 +734,36 @@
     }
 
     .basket__top {
+        margin-bottom: 0.5em;
         padding: 1em;
 
         background: linear-gradient(217deg, rgb(171, 155, 155), rgb(255, 255, 255), rgb(236, 220, 220)70.71%);
         border-radius: 5px;
     }
 
+    .basket__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        font-size: 0.9em;
+    }
+
+    .search {
+        position: relative;
+
+        width: 100%;
+    }
+
+    .search--icon {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+    }
+
     .basket--icon {
         float: left;
 
-        margin-right: 10px;
+        margin-right: 1em;
     }
 
     .how--work__top.items, .how--work__bottom.items {
@@ -811,6 +842,32 @@
         display: none !important;
     }
 
+    .header__main {
+        grid-template-columns: 1.1fr 1.4fr 0.4fr 1fr;
+    }
+
+    .contacts {
+        display: grid;
+        grid-template-areas: ". recall phone"
+                             ". . email";
+    }
+
+    .header__main .contacts > * {
+        text-align: left;
+    }
+
+    .contacts__recall {
+        grid-area: recall;
+    }
+
+    .contacts__phone {
+        grid-area: phone;
+    }
+
+    .contacts__email {
+        grid-area: email;
+    }
+
     .block.buy--now .items > div {
         width: 23%;
     }
@@ -867,5 +924,63 @@
 
     .hide-after-1140 {
         display: none !important;
+    }
+
+    .header__main {
+        grid-template-columns: 1fr 1.3fr 1fr 0.8fr;
+    }
+
+    .basket {
+        width: 100%;
+    }
+
+    .search__top {
+        margin-bottom: 1em;
+        padding-left: 30px;
+
+        background: url(../resources/image/rub.png) left center no-repeat;
+
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    .search__top > span {
+        color: #ff6837;
+        font-weight: 500;
+    }
+
+    .search__bar {
+        width: 80%;
+        height: 2em;
+
+        border-radius: 5px;
+        background-color: #eff0f4;
+    }
+
+    .search__bar input {
+        display: inline-block;
+
+        height: 100%;
+
+        border: none;
+        border-radius: 5px;
+        background-color: transparent;
+    }
+
+    .search__bar input[type="text"] {
+        width: 70%;
+
+        padding-left: 0.5em;
+    } 
+
+    .search__bar input[type="button"] {
+        width: 28%;
+
+        padding: 3px 5px;
+
+        background: #ff5816;
+        border-radius: 2px;
+
+        color: #fff;
     }
 }
