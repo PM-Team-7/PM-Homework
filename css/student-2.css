@@ -307,38 +307,68 @@
     display: none;
 }
 
-.reasons__main .good_reasons, .reasons__main .bad_reasons {
+.good_reasons, .bad_reasons {
     width: 48%;
     position: relative;
 }
 
-.reasons__main .good_reasons > h2, .reasons__main .bad_reasons > h2 {
-    height: 5.5em;
+.good_reasons > div, .bad_reasons > div {
+    vertical-align: middle;
 
     border-top-left-radius: 0.8em;
     border-top-right-radius: 0.8em;
 
-    padding: 2em 1em 2em 1em;
+    padding: 1.5em;
     color: white;
 }
 
-.reasons__main .bad_reasons > h2::before {
-    display: block;
-    content: " ";
-
-    background: url(../resources/image/block-6-background.png) center center no-repeat;
-    background-size: cover;
+.good_reasons > div {
+    background-color: #16a333;
 }
 
-.reasons__main .good_reasons > h2::before {
-    display: block;
-    content: " ";
-
-    background: url(../resources/image/block-6-background.png) center center no-repeat;
-    background-size: cover;
+.bad_reasons > div {
+    background-color: #cb0b13;
 }
 
-.reasons__main .good_reasons > ul, .reasons__main .bad_reasons > ul {
+.bad_reasons > div figure {
+    display: inline-block;
+
+    margin-right: 10px;
+
+    width: 10%;
+    height: 30px;
+
+    background: url(../resources/icon/bad.svg) center center no-repeat;
+    background-size: contain;
+
+    filter: invert(1);
+    vertical-align: top;
+}
+
+.bad_reasons > div p, .good_reasons > div p {
+    display: inline-block;
+
+    width: 80%;
+
+    font-weight: bold;
+}
+
+.good_reasons > div figure {
+    display: inline-block;
+
+    margin-right: 10px;
+
+    width: 10%;
+    height: 30px;
+
+    background: url(../resources/icon/good.svg) center center no-repeat;
+    background-size: contain;
+
+    filter: invert(1);
+    vertical-align: top;
+}
+
+.good_reasons > ul, .bad_reasons > ul {
     display: block;
     list-style: none;
 
@@ -354,7 +384,7 @@
     margin-bottom: 1em;
 }
 
-.reasons__main .good_reasons > ul li::before {
+.good_reasons > ul li::before {
     content: "\2022";
     font-weight: bold;
     display: inline-block;
@@ -363,7 +393,7 @@
     color: #16a333;
 }
 
-.reasons__main .bad_reasons > ul li::before {
+.bad_reasons > ul li::before {
     content: "\2022";
     font-weight: bold;
     display: inline-block;
@@ -372,17 +402,7 @@
     color: #cb0b13;
 }
 
-.reasons__main .good_reasons > h2 {
-    padding-top: 2.3em;
-    background-color: #16a333;
-}
-
-.reasons__main .bad_reasons > h2 {
-    padding-top: 1.5em;
-    background-color: #cb0b13;
-}
-
-.reasons__main .bad_reasons:after {
+.bad_reasons:after {
     content: '';
     display: block;
     position: absolute;
@@ -394,7 +414,7 @@
     box-shadow: 0px 0px 0px 2px #cb0b13 inset;
 }
 
-.reasons__main .good_reasons:after {
+.good_reasons:after {
     content: '';
     display: block;
     position: absolute;
