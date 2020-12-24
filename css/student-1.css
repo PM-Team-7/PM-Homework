@@ -2,6 +2,7 @@ html, body {
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 /* Screen size 320px */
@@ -17,7 +18,7 @@ body {
 
 .max-width {
     width: 100%;
-    /*margin: 0 auto;*/
+    margin: 0 auto;
 }
 
 /* Block-1 */
@@ -31,7 +32,7 @@ nav a {
     font-size: 40px;
 }
 
-nav a, .wide, .shrink {
+nav a, .wide, .shrink, .catalog-navigation  {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -72,9 +73,65 @@ nav a:hover {
     padding: 2%;
 }
 
+/* Block 3 */
+
+.hide-before-980 {
+    display: none;
+}
+
+.catalog-navigation {
+    list-style-type: none;
+    justify-content: center;
+
+    width: 100%;
+    height: 6vh;
+
+    margin: 10px 0;
+
+    background-color: #ff6837;
+    border-radius: 5px;
+    border-bottom: #c44817 3px solid;
+}
+
+.catalog-navigation > li {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    padding: 0 1%;
+
+    color: #ffffff;
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+.catalog-navigation > li:not(:last-child):after {
+    position: absolute;
+    right: 0;
+    top: 0;
+    content: "";
+    display: block;
+    width: 1px;
+    height: calc(100% + 3px);
+    background: #ff8f62;
+}
+
+.catalog-navigation > .arrow-right {
+    width: 10px;
+    height: 15px;
+    margin: 5px;
+}
+
 /* Block 7 */
 
-.carousel, .heading, .carousel-block .instances, .carousel-block .instance .bottom button {
+.carousel, .heading,
+.carousel-block .instances,
+.carousel-block .instance .bottom button,
+.carousel-block .sales-instance .timing,
+.carousel-block .sales-instance .timing .count-down {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -139,7 +196,7 @@ nav a:hover {
     width: 0;
 
     padding: 2% 1%;
-    margin: 1.5%;
+    margin: 1.2%;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 10px;
 }
@@ -251,6 +308,61 @@ nav a:hover {
     margin-right: 2%;
 }
 
+.carousel-block .sales-instance {
+    padding: 2% 0;
+}
+
+.carousel-block .sales-instance > * {
+    padding: 0 5%;
+}
+
+.carousel-block .sales-instance a {
+    width: 100%;
+    text-align: center;
+}
+
+.carousel-block .sales-instance .item-image {
+    width: 100%;
+    padding: 0;
+}
+
+.carousel-block .sales-instance .timing {
+    width: calc(100% - 2em);
+    padding: 0.3em 1em;
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+.carousel-block .sales-instance .timing p {
+    width: 25%;
+    margin: 5px;
+}
+
+
+.carousel-block .sales-instance .timing .count-down {
+    width: 60%;
+}
+
+.timing .count-down .time-block {
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: center;
+}
+
+.timing .count-down .time {
+    text-align: center;
+}
+
+
+.count-down .number-block {
+    background-color: #040d0d;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 3% 2%;
+    border-radius: 2px;
+}
 
 footer {
     background-color: #5c7489
@@ -270,6 +382,10 @@ footer {
 /* Screen size 980px*/
 
 @media only screen and (min-width: 980px) {
+
+    .hide-before-980 {
+        display: flex;
+    }
 
     .heading a {
         display: none;
