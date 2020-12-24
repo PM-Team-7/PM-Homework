@@ -91,12 +91,11 @@
 .header__top .city, 
 .header__top .cabinet,
 .header__top .login {
-    cursor: pointer;
     color: #4673ab;
 }
 
-.header__top .login {
-    margin-right: 0.3em;
+.header__top .slash {
+    margin-left: 0.3em;
 }
 
 .header__top .login, .header__top .slash {
@@ -739,6 +738,8 @@
 
         background: linear-gradient(217deg, rgb(171, 155, 155), rgb(255, 255, 255), rgb(236, 220, 220)70.71%);
         border-radius: 5px;
+
+        line-height: 1.2em;
     }
 
     .basket__bottom {
@@ -746,6 +747,16 @@
         justify-content: space-between;
 
         font-size: 0.9em;
+    }
+
+    .basket__bottom a {
+        text-decoration: none;
+        border-bottom: #4673ab 1px dotted;
+    }
+
+    .basket__bottom img {
+        width: 12px;
+        margin-right: 3px;
     }
 
     .search {
