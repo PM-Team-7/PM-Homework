@@ -66,7 +66,6 @@ nav a:hover {
     color: #fff;
 }
 
-
 #new, #recommendation, #sale, #promotion {
     width: 96%;
     height: 100%;
@@ -133,6 +132,8 @@ nav a:hover {
 }
 
 #new .instance {
+    position: relative;
+
     align-self: stretch;
     flex: 1 1 auto;
     width: 0;
@@ -141,6 +142,22 @@ nav a:hover {
     margin: 1.5%;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 10px;
+}
+
+#new .instance .overlay * {
+    z-index: 1;
+    position: absolute;
+    top: -5px;
+    left: 10px;
+}
+
+#new .instance .overlay p {
+    top: -10px;
+    left: 14px;
+
+    font-weight: 500;
+    font-size: 0.8em;
+    color: #ffffff;
 }
 
 #new .instance:nth-child(2),
@@ -226,7 +243,7 @@ footer {
 /* Screen size 750px */
 
 @media only screen and (min-width: 750px) {
-    
+
     /* Block-7 */
     #new .instance:nth-child(2),
     #new .instance:nth-child(3) {
