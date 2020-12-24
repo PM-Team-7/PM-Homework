@@ -88,10 +88,62 @@
     margin-top: 1em;
 }
 
-.header__top .city, 
-.header__top .cabinet,
-.header__top .login {
+.header__top .city {
+    cursor: pointer;
     color: #4673ab;
+}
+
+.change-city {
+    z-index: 9999;
+    position: absolute;
+    display: none;
+
+    max-width: 1140px;
+    height: 40vh;
+
+    margin-top: 1em;
+    padding: 1em;
+
+    border: 2px solid #ff5816;
+    background-color: white;
+    border-radius: 1em;
+}
+
+.change-city h2 {
+    margin-top: 0;
+
+    font-weight: 500;
+}
+
+.change-city ul {
+    display: block;
+    list-style: none;
+
+    height: 85%;
+    overflow-y: scroll;
+
+    margin-block-start: 1.5em;
+    margin-block-end: 1.5em;
+    
+    margin-inline-start: -10px;
+    padding-inline-start: 30px;
+}
+
+.change-city ul li {
+    margin-bottom: 1em;
+}
+
+.change-city ul li::before {
+    content: "\2022";
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    color: black;
+}
+
+.city:active + .change-city {
+    display: block;
 }
 
 .header__top .slash {
@@ -141,13 +193,15 @@
 
 .contacts {
     grid-area: contacts;
+}
 
+.contacts-inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.header__main .contacts > .contacts__recall {
+.header__main .contacts-inner > .contacts__recall {
     width: 130px;
 
     margin: 0 auto;
@@ -161,6 +215,11 @@
     background: url(../resources/image/cloud.png) center center no-repeat;
 }
 
+.contacts__recall a {
+    text-decoration: none;
+    border-bottom: #4673ab 1px dotted;
+}
+
 .contacts__phone .phone-main {
     font-weight: 500;
 }
@@ -170,8 +229,14 @@
     font-size: 0.9em;
 }
 
-.dotted {
-    border-bottom: 2px red dashed;
+.contacts img {
+    height: 16px;
+
+    margin-right: 5px;
+}
+
+.search input {
+    cursor: pointer;
 }
 
 .icon {
@@ -261,6 +326,73 @@
     background: url(../resources/icon/arrow-right.svg) center center;
 }
 
+.main-slider__nav {
+    position: absolute;
+
+    bottom: 5%;
+    right: 7%;
+}
+
+.nav-radio {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.nav-radio+label {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+.main-slider__nav {
+    cursor: default;
+}
+
+.nav-radio+label {
+    cursor: default;
+}
+
+.nav-radio+label::before {
+    display: inline-block;
+    content: '';
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+    flex-grow: 0;
+
+    width: 1em;
+    height: 1em;
+
+    background-color: white;
+
+    border: 1px solid #adb5bd;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+
+    transition: all 1s cubic-bezier(0, 0, .5, 1);
+}
+
+.nav-radio:active+label::before {
+    background-color: #adb5bd;
+    border-color: #adb5bd;
+}
+
+.nav-radio:hover+label::before {
+    background-color: #ffa885;
+    border-color: #ffa885;
+}
+
+.nav-radio:focus+label::before {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.nav-radio:checked+label::before {
+    background-color: #ff5816;
+    border-color: #ff5816;
+}
+
 .main-slider-wrap .slider .slide {
     padding: 5% 7%;
 
@@ -278,6 +410,10 @@
 
     font-size: 1.5em;
     font-weight: 400;
+}
+
+.main-slider-wrap .slider .slide p:nth-child(3) {
+    font-style: italic;
 }
 
 .main-slider-wrap .slider .slide p:first-child {
@@ -312,7 +448,12 @@
 
     border-radius: 0.8em;
 
+    font-weight: 500;
     text-align: center;
+}
+
+.main-slider-wrap .slider .slide .details a {
+    text-decoration: none;
 }
 
 
@@ -336,6 +477,9 @@
 
 .buy--now .items > div a {
     display: block;
+    
+    font-weight: 500;
+    line-height: 1.2em;
 }
 
 
@@ -381,13 +525,22 @@
     margin-top: 25%;
 }
 
+.block.widget .items > div p {
+    font-weight: 500;
+}
+
 
 /* Block 14 */
 
+.reasons-wrap {
+    width: 48%;
+}
 
 .good_reasons, .bad_reasons {
-    width: 48%;
     position: relative;
+    width: 100%;
+
+    padding-bottom: 0.8em;
 }
 
 .good_reasons > div, .bad_reasons > div {
@@ -586,7 +739,7 @@
 }
 
 .how--work__top > div a {
-    border-color: #ff5816;
+    border-bottom: 2px #ff5816 dashed;
 
     text-decoration: none;
     font-weight: bold;
@@ -617,7 +770,11 @@
     width: 50px;
     height: 50px;
 
-    margin-left: 30%;
+    margin: 0 auto;
+}
+
+.how--work__bottom > div > figure:first-child {
+    background-position: right;
 }
 
 .how--work__bottom > figure:nth-child(4) {
@@ -715,13 +872,18 @@
         margin-bottom: 10px;
     }
 
-    .header__main .contacts {
+    .header__main .contacts-inner {
         flex-direction: column;
         justify-content: flex-start;
     }
 
-    .header__main .contacts > * {
+    .header__main .contacts-inner > * {
         text-align: right;
+    }
+
+    .contacts-inner {
+        width: 75%;
+        margin: 0 auto;
     }
 
     .phone-main {
@@ -798,39 +960,11 @@
     }
 
     .how--work__bottom > figure {
-        height: 30px;
-    }
-
-    .how--work__bottom > figure {
         width: 4%;
     }
 
     .how--work__bottom > figure:nth-child(4) {
         display: block;
-    }
-
-    .how--work__bottom > div > figure {
-        display: inline-block;
-
-        width: 35px;
-        height: 35px;
-    
-        margin-left: 0;
-    }
-
-    .how--work__bottom > div:nth-child(5) > figure {
-        width: 50px;
-    }
-
-    .how--work__bottom > div:nth-child(5) > div {
-        width: 60%;
-    }
-
-    .how--work__bottom > div > div {
-        display: inline-block;
-        width: 70%;
-
-        vertical-align: top;
     }
 }
 
@@ -857,13 +991,16 @@
         grid-template-columns: 1.1fr 1.4fr 0.4fr 1fr;
     }
 
-    .contacts {
+    .contacts-inner {
         display: grid;
         grid-template-areas: ". recall phone"
                              ". . email";
+
+        width: 100%;
+        margin: 0;
     }
 
-    .header__main .contacts > * {
+    .header__main .contacts-inner > * {
         text-align: left;
     }
 
@@ -919,6 +1056,34 @@
     .how--work__top > div:nth-child(4) {
         padding-top: 1em;
         line-height: 1em;
+    }
+
+    .how--work__bottom > figure {
+        height: 30px;
+    }
+
+    .how--work__bottom > div > figure {
+        display: inline-block;
+
+        width: 35px;
+        height: 35px;
+    
+        margin-left: 0;
+    }
+
+    .how--work__bottom > div:nth-child(5) > figure {
+        width: 50px;
+    }
+
+    .how--work__bottom > div:nth-child(5) > div {
+        width: 60%;
+    }
+
+    .how--work__bottom > div > div {
+        display: inline-block;
+        width: 70%;
+
+        vertical-align: top;
     }
 }
 
