@@ -66,7 +66,7 @@ nav a:hover {
     color: #fff;
 }
 
-#new, #recommendation, #sale, #promotion {
+.carousel-block {
     width: 96%;
     height: 100%;
     padding: 2%;
@@ -74,37 +74,37 @@ nav a:hover {
 
 /* Block 7 */
 
-.new__carousel, .new__heading, #new .instances, #new .instance .bottom button {
+.carousel, .heading, .carousel-block .instances, .carousel-block .instance .bottom button {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.new__carousel > .arrow-left,
-.new__carousel > .arrow-right {
+.carousel > .arrow-left,
+.carousel > .arrow-right {
     width: 20px;
     display: none;
     cursor: pointer;
 }
 
-.new__heading h2 {
+.carousel-block .heading h2 {
     font-size: 2em;
     font-weight: 500;
 }
 
-.new__heading hr {
-    width: 75%;
+.heading hr {
+    width: 65%;
     margin: 0 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.new__heading a {
+.heading a {
     color: #4673ab;
     font-size: 0.8em;
     display: none;
 }
 
-.new__heading .arrows {
+.heading .arrows {
     display: inline-flex;
     justify-content: space-between;
 
@@ -113,8 +113,8 @@ nav a:hover {
     cursor: pointer;
 }
 
-.new__heading .arrows .arrow-left,
-.new__heading .arrows .arrow-right {
+.heading .arrows .arrow-left,
+.heading .arrows .arrow-right {
     width: 20px;
     height: 20px;
     padding: 5%;
@@ -125,13 +125,13 @@ nav a:hover {
     border: #dbdee6 2px solid;
 }
 
-#new .instances {
+.carousel-block .instances {
     width: 100%;
     height: 100%;
     justify-content: stretch;
 }
 
-#new .instance {
+.carousel-block .instance {
     position: relative;
 
     align-self: stretch;
@@ -144,69 +144,85 @@ nav a:hover {
     border-radius: 10px;
 }
 
-#new .instance .overlay * {
+.carousel-block .instance .overlay * {
     z-index: 1;
     position: absolute;
     top: -5px;
     left: 10px;
 }
 
-#new .instance .overlay p {
+.carousel-block .instance .overlay .new,
+.carousel-block .instance .overlay .percentage {
+    color: #ffffff;
+}
+
+.carousel-block .instance .overlay .new {
     top: -10px;
     left: 14px;
 
     font-weight: 500;
     font-size: 0.8em;
-    color: #ffffff;
 }
 
-#new .instance:nth-child(2),
-#new .instance:nth-child(3),
-#new .instance:nth-child(4) {
+.carousel-block .instance .overlay .percentage {
+    top: -18px;
+    left: 17px;
+
+    font-size: 1.8em;
+}
+
+.carousel-block .instance .overlay .like-icon {
+    top: 2px;
+    left: 1.1em;
+}
+
+.carousel-block .instance:nth-child(2),
+.carousel-block .instance:nth-child(3),
+.carousel-block .instance:nth-child(4) {
     display: none
 }
 
-#new .instance:hover {
+.carousel-block .instance:hover {
     transition: .3s;
     border-color: #ff6837;
 }
 
-#new .instance > img {
+.carousel-block .instance > img {
     display: block;
     height: 150px;
     margin: 25px auto;
 }
 
-#new .instance a {
+.carousel-block .instance a {
     color: #4673ab;
     font-weight: 500;
     font-size: 1em;
     cursor: pointer;
 }
 
-#new .instance p {
+.carousel-block .instance p {
     margin: 20px 0;
 }
 
-#new .instance p .bold {
+.carousel-block .instance p .bold {
     font-weight: 500;
     font-size: 19px;
 }
 
-#new .instance p .crossed {
+.carousel-block .instance p .crossed {
     color: #ff6837;
     text-decoration: line-through;
     margin-left: 5px;
     font-size: 13px;
 }
 
-#new .instance .bottom {
+.carousel-block .instance .bottom {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-#new .instance .bottom button {
+.carousel-block .instance .bottom button {
     padding: 4% 7%;
     color: #ffffff;
     font-weight: 600;
@@ -218,18 +234,18 @@ nav a:hover {
     cursor: pointer;
 }
 
-#new .instance .bottom button:hover {
+.carousel-block .instance .bottom button:hover {
     transition: .3s;
     background-color: #4673ab;
     border-color: #4673ab;
     border-bottom-color: #284263;
 }
 
-#new .new__instance .bottom button .cart {
+.carousel-block .instance .bottom button .cart {
     margin-right: 5px;
 }
 
-#new .new__instance .bottom a {
+.carousel-block .instance .bottom a {
     font-weight: 300;
     font-size: 0.6em;
     margin-right: 2%;
@@ -245,8 +261,8 @@ footer {
 @media only screen and (min-width: 750px) {
 
     /* Block-7 */
-    #new .instance:nth-child(2),
-    #new .instance:nth-child(3) {
+    .carousel-block .instance:nth-child(2),
+    .carousel-block .instance:nth-child(3) {
         display: inline;
     }
 }
@@ -255,11 +271,11 @@ footer {
 
 @media only screen and (min-width: 980px) {
 
-    .new__heading a {
+    .heading a {
         display: none;
     }
 
-    .new__heading .arrows {
+    .heading .arrows {
         display: flex;
     }
 
@@ -358,26 +374,26 @@ footer {
     }
 
     /* Block 7 */
-    .new__heading h2 {
+    .heading h2 {
         font-size: 1.6em;
     }
 
-    .new__heading a {
+    .heading a {
         display: inline;
     }
 
-    .new__heading .arrows {
+    .heading .arrows {
         display: none;
     }
 
-    .new__carousel > .arrow-left,
-    .new__carousel > .arrow-right {
+    .carousel > .arrow-left,
+    .carousel > .arrow-right {
         display: inline;
     }
 
-    #new .instance:nth-child(2),
-    #new .instance:nth-child(3),
-    #new .instance:nth-child(4) {
+    .carousel-block .instance:nth-child(2),
+    .carousel-block .instance:nth-child(3),
+    .carousel-block .instance:nth-child(4) {
         display: inline;
     }
 
