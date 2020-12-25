@@ -83,10 +83,68 @@ body {
     display: block;
 }
 
+.important-info .news {
+    width: 25%;
+    margin-right: 25px;
+}
+
+.important-info .news .item {
+    margin-bottom: 10px;
+}
+
+.important-info .news h2 {
+    display: inline;
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.important-info .news .col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.important-info .news .col .day {
+    text-align: center;
+    background-color: #fff;
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    color: #ff6837;
+    font-weight: 500;
+    font-size: 1.5em;
+    position: absolute;
+    padding-top: 7px;
+    top: 50px;
+}
+
+.important-info .news a {
+    color: #4673ab;
+    text-decoration-style: dotted;
+}
+
+.important-info .news .col a {
+    font-weight: 500;
+    color: #4673ab;
+    text-decoration: none;
+}
+
+.important-info .news .col a:hover {
+    color: #ff6837;
+    text-decoration: underline;
+}
+
+.important-info .news .col p {
+    z-index: 3;
+    margin-top: 15px;
+}
+
 /* Block 7, 8, 9 */
 
-footer,
-.pre-footer__link,
+footer, .important-info,
+.news .item, .pre-footer__link,
 .carousel-block__carousel,
 .carousel-block__heading,
 .carousel-block__heading .carousel-block__arrows,
@@ -458,7 +516,7 @@ footer,
 /* Block 19 */
 
 footer {
-    color: rgba(255,255,255,0.4);
+    color: rgba(255, 255, 255, 0.4);
     font-weight: 200;
     font-size: 0.8em;
     background-color: midnightblue;
@@ -473,6 +531,11 @@ footer p {
 /* Screen size 750px */
 
 @media only screen and (min-width: 750px) {
+
+    .important-info .news {
+        width: 40%;
+        margin-right: 25px;
+    }
 
     .carousel-block {
         margin: 5% 0;
@@ -627,6 +690,17 @@ footer p {
 
     .hide-after-980-flex {
         display: none;
+    }
+
+    .important-info {
+        width: 100%;
+        padding-top: 20px;
+        justify-content: center;
+    }
+
+    .important-info .news {
+        width: 25%;
+        margin-right: 25px;
     }
 
     .carousel-block .carousel-block__instances {
