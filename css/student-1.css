@@ -81,7 +81,8 @@ body {
 
 /* Block 7, 8, 9 */
 
-.pre-footer .max-width,
+.pre-footer__body,
+.pre-footer__body .contacts-inner,
 .carousel-block__carousel,
 .carousel-block__heading,
 .carousel-block__heading .carousel-block__arrows,
@@ -341,12 +342,22 @@ body {
 
 .pre-footer {
     color: #ffffff;
-    font-weight: 200;
-    background-color: #5c7489
+    font-weight: 300;
+    font-size: 0.85em;
+    background-color: #5c7489;
 }
 
-.pre-footer .col {
-    width: 25%;
+.pre-footer__body {
+    height: 100%;
+    width: 96%;
+    padding: 2%;
+    line-height: 1.5;
+    align-items: flex-start;
+}
+
+.pre-footer__body .col {
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -354,6 +365,78 @@ body {
 .pre-footer .col > a {
     color: #ffffff;
 }
+
+.pre-footer .col .row {
+    height: 20%;
+    display: flex;
+}
+
+.pre-footer .col .row:not(:last-child) {
+    margin-bottom: 7%;
+}
+
+.pre-footer .logo {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: lighter;
+}
+
+.pre-footer .logo__text div {
+    display: inline-block;
+
+    margin: 3px;
+    padding: 3px 4px;
+
+    color: #ff6837;
+    background: linear-gradient(217deg, rgb(171, 155, 155), rgb(255, 255, 255), rgb(236, 220, 220) 70.71%);
+    border-radius: 5px;
+}
+
+.pre-footer .logo__tagline {
+    font-size: 0.25em;
+}
+
+.pre-footer__body .contacts__recall {
+    width: 200px;
+    height: 57px;
+
+    padding-top: 25px;
+    padding-right: 10px;
+
+    text-align: center;
+    line-height: 1.5em;
+    font-size: 0.8em;
+
+    background: url(../resources/image/cloud.png) center center no-repeat;
+}
+
+.pre-footer__body .contacts__recall a {
+    color: #4673ab;
+    text-decoration-style: dotted;
+}
+
+.pre-footer__body .contacts__phone .phone-main {
+    font-weight: 500;
+}
+
+.pre-footer__body .contacts__phone .phone-secondary {
+    display: inline;
+    font-size: 0.9em;
+}
+
+.pre-footer__body .contacts .social {
+    height: 16px;
+    margin-right: 5px;
+}
+
+.pre-footer__body .contacts .socials {
+    height: 100%;
+    margin-left: -50px;
+    margin-top: 10px;
+}
+
 
 /* Block 19 */
 
