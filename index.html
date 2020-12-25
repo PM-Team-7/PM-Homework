@@ -13,12 +13,15 @@
 <body>
 
 <!--Block-1-->
-<nav>
-    <div class="wide max-width">
-        <div class="dropdown">
-            <a href="https://homy.ru/catalog/">Каталог<img class="arrow-down" src="resources/icon/arrow-down.svg"
-                                                           alt="arrow-down"></a>
-            <div class="dropdown-content">
+<nav class="nav">
+    <div class="nav__nav-body_wide max-width">
+        <div class="nav__dropdown dropdown">
+            <a class="nav__link" href="https://homy.ru/catalog/">
+                Каталог
+                <img class="arrow-down" src="resources/icon/arrow-down.svg"alt="arrow-down">
+            </a>
+
+            <div class="dropdown__content">
                 <a href="#">VOIP оборудование</a>
                 <a href="#">GSM оборудование</a>
                 <a href="#">Телефония</a>
@@ -30,12 +33,15 @@
                 <a href="#">Распродажа</a>
             </div>
         </div>
-        <div class="vertical-line"></div>
+        <div class="nav__vertical-line"></div>
 
-        <div class="dropdown">
-            <a href="https://homy.ru/about/">О компании<img class="arrow-down" src="resources/icon/arrow-down.svg"
-                                                            alt="arrow-down"></a>
-            <div class="dropdown-content">
+        <div class="nav__dropdown dropdown">
+            <a class="nav__link" href="https://homy.ru/about/">
+                О компании
+                <img class="arrow-down" src="resources/icon/arrow-down.svg" alt="arrow-down">
+            </a>
+
+            <div class="dropdown__content">
                 <a href="">Наша команда</a>
                 <a href="#">Отзывы</a>
                 <a href="#">Сертификаты</a>
@@ -43,39 +49,42 @@
                 <a href="#">Вакансии</a>
             </div>
         </div>
-        <div class="vertical-line"></div>
+        <div class="nav__vertical-line"></div>
 
-        <a href="https://homy.ru/pay/">Оплата и доставка</a>
-        <div class="vertical-line"></div>
+        <a class="nav__link" href="https://homy.ru/about/">Оплата и доставка</a>
+        <div class="nav__vertical-line"></div>
 
-        <a href="https://homy.ru/garantiya_i_vozvrat_tovara/">Гарантии и возврат</a>
-        <div class="vertical-line"></div>
+        <a class="nav__link" href="https://homy.ru/about/">Гарантии и возврат</a>
+        <div class="nav__vertical-line"></div>
 
-        <a href="https://homy.ru/sotrudnichestvo/">Сотрудничество</a>
-        <div class="vertical-line"></div>
+        <a class="nav__link" href="https://homy.ru/sotrudnichestvo/">Сотрудничество</a>
+        <div class="nav__vertical-line"></div>
 
-        <div class="dropdown">
-            <a href="https://homy.ru/services/">Услуги<img class="arrow-down" src="resources/icon/arrow-down.svg"
-                                                           alt="arrow-down"></a>
-            <div class="dropdown-content">
+        <div class="nav__dropdown dropdown">
+            <a class="nav__link" href="https://homy.ru/services/">
+                Услуги
+                <img class="arrow-down" src="resources/icon/arrow-down.svg"alt="arrow-down">
+            </a>
+
+            <div class="dropdown__content">
                 <a href="#">Настройка VoIP оборудования</a>
                 <a href="#">Настройка IP ATC</a>
                 <a href="#">Аутсорсинг в IP области телефонии</a>
                 <a href="#">Подключение IP телефонии, виртуальной ATC (BATC)</a>
             </div>
         </div>
-        <div class="vertical-line"></div>
+        <div class="nav__vertical-line"></div>
 
-        <a href="https://homy.ru/support/">Решения</a>
-        <div class="vertical-line"></div>
+        <a class="nav__link" href="https://homy.ru/support/">Решения</a>
+        <div class="nav__vertical-line"></div>
 
-        <a href="https://homy.ru/support/">Техподдержка</a>
-        <div class="vertical-line"></div>
+        <a class="nav__link" href="https://homy.ru/support/">Техподдержка</a>
+        <div class="nav__vertical-line"></div>
 
-        <a href="https://homy.ru/contact/">Контакты</a>
+        <a class="nav__link" href="https://homy.ru/contact/">Контакты</a>
     </div>
-    <div class="shrink">
-        <a href=""><img class="menu-icon" src="resources/icon/menu.svg" alt="menu">Меню</a>
+    <div class="nav__nav-body_shrink">
+        <a class="nav__link" href=""><img class="menu-icon" src="resources/icon/menu.svg" alt="menu">Меню</a>
     </div>
 </nav>
 
@@ -117,24 +126,24 @@
         </section>
 
         <!--Block-7-->
-        <section class="carousel-block">
+        <div class="carousel-block">
 
-            <div class="heading">
+            <div class="carousel-block__heading">
                 <h2>НОВИНКИ</h2>
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
                 <hr>
                 <a href="#">Все новинки</a>
-                <div class="arrows">
+                <div class="carousel-block__arrows">
                     <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
                     <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
                 </div>
             </div>
 
-            <div class="carousel">
+            <div class="carousel-block__carousel">
                 <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
 
-                <div class="instances">
-                    <div class="instance">
+                <div class="carousel-block__instances">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -159,7 +168,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -184,7 +193,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -209,7 +218,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -238,27 +247,27 @@
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
             </div>
 
-        </section>
+        </div>
 
         <!--Block-8-->
-        <section class="carousel-block">
+        <div class="carousel-block">
 
-            <div class="heading">
+            <div class="carousel-block__heading">
                 <h2>РЕКОМЕНДУЕМ</h2>
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
                 <hr>
                 <a href="#">Все рекомендации</a>
-                <div class="arrows">
+                <div class="carousel-block__arrows">
                     <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
                     <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
                 </div>
             </div>
 
-            <div class="carousel">
+            <div class="carousel-block__carousel">
                 <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
 
-                <div class="instances">
-                    <div class="instance">
+                <div class="carousel-block__instances">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -284,7 +293,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -310,7 +319,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -336,7 +345,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -366,27 +375,27 @@
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
             </div>
 
-        </section>
+        </div>
 
         <!--Block-9-->
-        <section class="carousel-block">
+        <div class="carousel-block">
 
-            <div class="heading">
+            <div class="carousel-block__heading">
                 <h2>РАСПРОДАЖА</h2>
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
                 <hr>
                 <a href="#">Все товары</a>
-                <div class="arrows">
+                <div class="carousel-block__arrows">
                     <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
                     <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
                 </div>
             </div>
 
-            <div class="carousel">
+            <div class="carousel-block__carousel">
                 <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
 
-                <div class="instances">
-                    <div class="instance">
+                <div class="carousel-block__instances">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -412,7 +421,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -438,7 +447,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -464,7 +473,7 @@
 
                     </div>
 
-                    <div class="instance">
+                    <div class="carousel-block__instance">
 
                         <div class="overlay">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -494,36 +503,36 @@
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
             </div>
 
-        </section>
+        </div>
 
         <!--Block-10-->
-        <section class="carousel-block">
+        <div class="carousel-block">
 
-            <div class="heading">
+            <div class="carousel-block__heading">
                 <h2>АКЦИИ</h2>
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
                 <hr>
                 <a href="#">Все акции</a>
-                <div class="arrows">
+                <div class="carousel-block__arrows">
                     <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
                     <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
                 </div>
             </div>
 
-            <div class="carousel">
+            <div class="carousel-block__carousel">
                 <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
 
-                <div class="instances">
+                <div class="carousel-block__instances">
 
-                    <div class="instance sales-instance">
+                    <div class="carousel-block__instance sales-instance">
                         <a href="#">Название акции</a>
                         <img class="item-image" src="resources/image/block-10-img-1.png" alt="item">
                         <p>Важным преимушеством использования айпи телефона вместо обычного, является на порядок более
                             низкая цена соединения.</p>
                         <div class="timing">
                             <p>Срок действия:</p>
-                            <div class="count-down">
-                                <div class="clock">
+                            <div class="timing__count-down">
+                                <div class="timing__clock">
                                     <span class="number-block">0</span>
                                     <span class="number-block">0</span>
                                     <span class="colon">:</span>
@@ -533,7 +542,7 @@
                                     <span class="number-block">0</span>
                                     <span class="number-block">0</span>
                                 </div>
-                                <div class="description">
+                                <div class="timing__description">
                                     <p>дней</p>
                                     <p>часов</p>
                                     <p>минут</p>
@@ -543,7 +552,7 @@
                         <a class="centered" href="#">Подробнее</a>
                     </div>
 
-                    <div class="instance sales-instance">
+                    <div class="carousel-block__instance sales-instance">
 
                         <a href="#">Название акции</a>
                         <img class="item-image" src="resources/image/block-10-img-2.png" alt="item">
@@ -558,7 +567,7 @@
 
                     </div>
 
-                    <div class="instance sales-instance">
+                    <div class="carousel-block__instance sales-instance">
 
                         <a href="#">Название акции</a>
                         <img class="item-image" src="resources/image/block-10-img-3.png" alt="item">
@@ -567,8 +576,8 @@
 
                         <div class="timing">
                             <p>Срок действия:</p>
-                            <div class="count-down">
-                                <div class="clock">
+                            <div class="timing__count-down">
+                                <div class="timing__clock">
                                     <span class="number-block">0</span>
                                     <span class="number-block">0</span>
                                     <span class="colon">:</span>
@@ -578,7 +587,7 @@
                                     <span class="number-block">0</span>
                                     <span class="number-block">0</span>
                                 </div>
-                                <div class="description">
+                                <div class="timing__description">
                                     <p>дней</p>
                                     <p>часов</p>
                                     <p>минут</p>
@@ -589,7 +598,7 @@
 
                     </div>
 
-                    <div class="instance sales-instance">
+                    <div class="carousel-block__instance sales-instance">
 
                         <a href="#">Название акции</a>
                         <img class="item-image" src="resources/image/block-10-img-4.png" alt="item">
@@ -598,8 +607,8 @@
 
                         <div class="timing">
                             <p>Срок действия:</p>
-                            <div class="count-down">
-                                <div class="clock">
+                            <div class="timing__count-down">
+                                <div class="timing__clock">
                                     <span class="number-block">0</span>
                                     <span class="number-block">0</span>
                                     <span class="colon">:</span>
@@ -609,7 +618,7 @@
                                     <span class="number-block">0</span>
                                     <span class="number-block">0</span>
                                 </div>
-                                <div class="description">
+                                <div class="timing__description">
                                     <p>дней</p>
                                     <p>часов</p>
                                     <p>минут</p>
@@ -620,13 +629,12 @@
 
                     </div>
 
-
                 </div>
 
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
             </div>
 
-        </section>
+        </div>
 
         <!--Block-11-->
         <section>
@@ -663,12 +671,30 @@
 
         </section>
     </div>
-</main>
-<!--Block-18-->
-<footer>
-    <div class="max-width">
 
-    </div>
+    <!--Block-18-->
+    <section class="pre-footer">
+<!--        <div class="max-width">-->
+<!--            <div class="col">Перепечатка материалов возможна только с активной ссылкой на homy.ru</div>-->
+<!--            <div class="col">-->
+<!--                г. Москва, Зеленоград, Панфиловский пр., дом 8, строение 1-->
+<!--                <a href="#">Схема проезда</a></div>-->
+<!--            <div class="col">-->
+<!--                <a href="#">Доставка и оплата</a>-->
+<!--                <a href="#">Гарантии и возврат</a>-->
+<!--                <a href="#">Техподдержка</a>-->
+<!--                <a href="#">Контакты</a>-->
+<!--            </div>-->
+<!--            <div class="col">aaaaaa</div>-->
+<!--        </div>-->
+    </section>
+
+</main>
+
+<!--Block-19-->
+<footer>
+
 </footer>
+
 </body>
 </html>
