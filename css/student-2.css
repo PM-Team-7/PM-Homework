@@ -307,11 +307,18 @@
 
 .main-slider-wrap .left-arr, .main-slider-wrap .right-arr {
     position: absolute;
+    cursor: pointer;
 
     top: 45%;
 
     width: 1em;
     height: 10%;
+
+    transition: .5s;
+}
+
+.main-slider-wrap .left-arr:active, .main-slider-wrap .right-arr:active {
+    filter: brightness(50%);
 }
 
 .main-slider-wrap .left-arr {
@@ -331,6 +338,8 @@
 
     bottom: 5%;
     right: 7%;
+
+    user-select: none;
 }
 
 .nav-radio {
@@ -342,15 +351,6 @@
 .nav-radio+label {
     display: inline-flex;
     align-items: center;
-    user-select: none;
-}
-
-.main-slider__nav {
-    cursor: default;
-}
-
-.nav-radio+label {
-    cursor: default;
 }
 
 .nav-radio+label::before {
@@ -455,6 +455,7 @@
 
     font-weight: 500;
     text-align: center;
+    user-select: none;
 
     transition: all .2s ease 0s;
 }
