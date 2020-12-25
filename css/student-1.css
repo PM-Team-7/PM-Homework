@@ -85,6 +85,7 @@ body {
 
 /* Block 7, 8, 9 */
 
+footer,
 .pre-footer__link,
 .carousel-block__carousel,
 .carousel-block__heading,
@@ -457,9 +458,16 @@ body {
 /* Block 19 */
 
 footer {
-    color: #ffffff;
+    color: rgba(255,255,255,0.4);
     font-weight: 200;
+    font-size: 0.8em;
     background-color: midnightblue;
+    padding: 2%;
+    justify-content: center;
+}
+
+footer p {
+    width: 80%;
 }
 
 /* Screen size 750px */
@@ -598,6 +606,10 @@ footer {
 
     .hide-before-750-flex {
         display: flex;
+    }
+
+    footer {
+        justify-content: space-between;
     }
 }
 
