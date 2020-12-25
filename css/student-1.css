@@ -91,14 +91,18 @@ body {
 .carousel-block__heading,
 .carousel-block__heading .carousel-block__arrows,
 .carousel-block__carousel .carousel-block__instances,
-.carousel-block__carousel .instance .bottom,
-.carousel-block__carousel .instance .bottom button,
+.carousel-block__carousel .carousel-block__instance .bottom,
+.carousel-block__carousel .carousel-block__instance .bottom button,
 .carousel-block__carousel .sales-instance .timing,
 .timing .timing__clock,
 .timing .timing__description {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.carousel-block {
+    margin: 10% 0;
 }
 
 .carousel-block__carousel > .arrow-left,
@@ -154,7 +158,8 @@ body {
 }
 
 .carousel-block .carousel-block__instances {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;
     height: 100%;
     justify-content: stretch;
 }
@@ -293,6 +298,7 @@ body {
 }
 
 .carousel-block .sales-instance .timing {
+    height: 12%;
     width: calc(100% - 1em);
     padding: 0.5em;
     background-color: lightgray;
@@ -461,6 +467,15 @@ footer {
 
 @media only screen and (min-width: 750px) {
 
+    .carousel-block {
+        margin: 5% 0;
+    }
+
+    .carousel-block .carousel-block__instances {
+        width: 100%;
+        margin: 0 auto;
+    }
+
     .pre-footer {
         color: rgba(255, 255, 255, 0.7);
         font-weight: 300;
@@ -476,7 +491,6 @@ footer {
         justify-content: space-between;
         align-items: flex-start;
     }
-
 
     .pre-footer__body .col {
         height: 100%;
@@ -596,6 +610,9 @@ footer {
 
 @media only screen and (min-width: 980px) {
 
+    .carousel-block {
+        margin: 3% 0;
+    }
 
     .hide-before-980 {
         display: flex;
@@ -603,6 +620,12 @@ footer {
 
     .hide-after-980 {
         display: none;
+    }
+
+    .carousel-block .carousel-block__instances {
+        width: 100%;
+        height: 100%;
+        justify-content: stretch;
     }
 
     .catalog-navigation {
