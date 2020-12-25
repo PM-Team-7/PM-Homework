@@ -17,7 +17,7 @@ body {
 }
 
 .max-width {
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
 }
 
@@ -68,14 +68,14 @@ body {
 }
 
 .carousel-block {
-    width: 96%;
+    width: 100%;
     height: 100%;
     padding: 2%;
 }
 
 /* Block 3 */
 
-.hide-before-980 {
+.hide-before-980-block {
     display: none;
 }
 
@@ -86,7 +86,6 @@ body {
 /* Block 7, 8, 9 */
 
 .pre-footer__link,
-.pre-footer__body .contacts-inner,
 .carousel-block__carousel,
 .carousel-block__heading,
 .carousel-block__heading .carousel-block__arrows,
@@ -354,7 +353,7 @@ body {
     display: none;
 }
 
-.hide-before-750 {
+.hide-before-750-flex {
     display: none;
 }
 
@@ -388,27 +387,27 @@ body {
     font-size: 0.25em;
 }
 
-.pre-footer__body .contacts__recall a {
+.pre-footer__body .contacts__recall-1 a {
     color: #4673ab;
     text-decoration-style: dotted;
 }
 
-.pre-footer__body .contacts__email {
+.pre-footer__body .email {
     color: #ffffff;
 }
 
-.pre-footer__body .contacts__recall a:hover {
+.pre-footer__body .contacts__recall-1 a:hover {
     color: #ff6837;
     text-decoration-style: dotted;
 }
 
-.pre-footer__body .contacts__phone .phone-main {
+.pre-footer__body .phone .phone-main {
     color: rgba(255, 255, 255, 1);
     font-size: 1.5em;
     font-weight: 500;
 }
 
-.pre-footer__body .contacts__phone .phone-secondary {
+.pre-footer__body .phone .phone-secondary {
     display: inline;
     font-size: 0.9em;
 }
@@ -425,7 +424,7 @@ body {
 }
 
 .pre-footer__link {
-    width: 94%;
+    width: 100%;
     justify-content: space-between;
     border-bottom: 1px solid #fff;
     padding: 3%;
@@ -451,7 +450,7 @@ body {
     height: 40px;
 }
 
-.pre-footer .contacts {
+.pre-footer .cont {
     text-align: right;
 }
 
@@ -485,8 +484,8 @@ footer {
 
     .pre-footer__body {
         height: 100%;
-        width: 86%;
-        padding: 2% 7%;
+        width: 100%;
+        padding: 2% 4%;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -532,11 +531,11 @@ footer {
         font-size: 0.25em;
     }
 
-    .pre-footer__body .contacts__recall {
+    .pre-footer__body .contacts__recall-1 {
         width: 112px;
         height: 57px;
 
-        padding-top: 25px;
+        padding-top: 15px;
         padding-right: 10px;
 
         text-align: center;
@@ -546,30 +545,26 @@ footer {
         background: url(../resources/image/cloud.png) center center no-repeat;
     }
 
-    .pre-footer__body .contacts__phone .phone-main {
+    .pre-footer__body .phone .phone-main {
         font-size: 1.5em;
     }
 
-    .pre-footer__body .contacts__phone .phone-secondary {
+    .pre-footer__body .phone .phone-secondary {
         font-size: 0.9em;
     }
 
-    .pre-footer__body .contacts .social {
+    .pre-footer__body .cont .social {
         height: 16px;
         margin-right: 5px;
     }
 
-    .pre-footer__body .contacts .socials {
+    .pre-footer__body .cont .socials {
         height: 100%;
         margin-left: -50px;
         margin-top: 10px;
     }
 
-    .pre-footer .contacts {
-        text-align: right;
-    }
-
-    .pre-footer__body .contacts__recall a {
+    .pre-footer__body .contacts__recall-1 a {
         color: #4673ab;
         text-decoration-style: dotted;
     }
@@ -589,7 +584,7 @@ footer {
         height: 35px;
     }
 
-    .pre-footer .contacts {
+    .pre-footer .cont {
         text-align: right;
     }
 
@@ -601,7 +596,7 @@ footer {
         display: flex;
     }
 
-    .hide-before-750 {
+    .hide-before-750-flex {
         display: flex;
     }
 }
@@ -614,11 +609,11 @@ footer {
         margin: 3% 0;
     }
 
-    .hide-before-980 {
+    .hide-before-980-block {
         display: flex;
     }
 
-    .hide-after-980 {
+    .hide-after-980-flex {
         display: none;
     }
 
