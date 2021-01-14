@@ -177,10 +177,12 @@
 }
 
 .logo__text div {
-    display: inline-block;
+    line-height: 1;
 
-    margin: 0 3px;
-    padding: 3px 4px;
+    margin: 0 2px 2px 2px;
+    padding: 1px 2px;
+
+    display: inline-block;
 
     color: #ff6837;
     background: linear-gradient(217deg, rgb(171, 155, 155), rgb(255, 255, 255), rgb(236, 220, 220)70.71%);
