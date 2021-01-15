@@ -450,11 +450,9 @@ a {
 }
 
 .main-slider-wrap .slider .slide .details {
-    position: relative;
-    z-index: 10;
+    width: 150px;
 
-    height: 3em;
-
+    margin-top: 3em;
     padding: 1em;
 
     background-color: white;
