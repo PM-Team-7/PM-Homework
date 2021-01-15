@@ -69,63 +69,63 @@ main {
 
 /*!* Block 3 *!*/
 
-/*.important-info .news {*/
-/*    width: 25%;*/
-/*    margin-right: 25px;*/
-/*}*/
+.important-info .news {
+    width: 25%;
+    margin-right: 25px;
+}
 
-/*.important-info .news .item {*/
-/*    margin-bottom: 10px;*/
-/*}*/
+.important-info .news .item {
+    margin-bottom: 10px;
+}
 
-/*.important-info .news h2 {*/
-/*    display: inline;*/
-/*    width: 100%;*/
-/*    font-size: 1.3em;*/
-/*}*/
+.important-info .news h2 {
+    display: inline;
+    width: 100%;
+    font-size: 1.3em;
+}
 
-/*.important-info .news .col {*/
-/*    position: relative;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
+.important-info .news .col {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-/*.important-info .news .col .day {*/
-/*    text-align: center;*/
-/*    background-color: #fff;*/
-/*    height: 30px;*/
-/*    width: 40px;*/
-/*    border-radius: 10px;*/
-/*    color: #ff6837;*/
-/*    font-weight: 500;*/
-/*    font-size: 1.5em;*/
-/*    position: absolute;*/
-/*    padding-top: 7px;*/
-/*    top: 50px;*/
-/*}*/
+.important-info .news .col .day {
+    text-align: center;
+    background-color: #fff;
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    color: #ff6837;
+    font-weight: 500;
+    font-size: 1.5em;
+    position: absolute;
+    padding-top: 7px;
+    top: 50px;
+}
 
-/*.important-info .news a {*/
-/*    color: #4673ab;*/
-/*    text-decoration-style: dotted;*/
-/*}*/
+.important-info .news a {
+    color: #4673ab;
+    text-decoration-style: dotted;
+}
 
-/*.important-info .news .col a {*/
-/*    font-weight: 500;*/
-/*    color: #4673ab;*/
-/*    text-decoration: none;*/
-/*}*/
+.important-info .news .col a {
+    font-weight: 500;
+    color: #4673ab;
+    text-decoration: none;
+}
 
-/*.important-info .news .col a:hover {*/
-/*    color: #ff6837;*/
-/*    text-decoration: underline;*/
-/*}*/
+.important-info .news .col a:hover {
+    color: #ff6837;
+    text-decoration: underline;
+}
 
-/*.important-info .news .col p {*/
-/*    z-index: 3;*/
-/*    margin-top: 15px;*/
-/*}*/
+.important-info .news .col p {
+    z-index: 3;
+    margin-top: 15px;
+}
 
 /*!* Block 7, 8, 9 *!*/
 
@@ -380,8 +380,8 @@ footer, .important-info,
 }
 
 .carousel-block .sales-instance .timing {
-    height: 12%;
-    width: calc(100% - 1em);
+    width: 100%;
+    height: 5em;
     padding: 0.5em;
     background-color: lightgray;
     margin-bottom: 10px;
@@ -601,10 +601,10 @@ footer .statistics {
 
 @media only screen and (min-width: 750px) {
 
-    /*    .important-info .news {*/
-    /*        width: 40%;*/
-    /*        margin-right: 25px;*/
-    /*    }*/
+    .important-info .news {
+        width: 40%;
+        margin-right: 25px;
+    }
 
     /* Block-7 */
     .carousel-block {
@@ -638,7 +638,7 @@ footer .statistics {
     /*Block 18*/
     .pre-footer {
         font-size: 0.9em;
-        padding: 4% 1% 2% 1%;
+        padding: 40px 1% 25px 1%;
         line-height: 1.5;
     }
 
