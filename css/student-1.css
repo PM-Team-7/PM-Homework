@@ -183,6 +183,11 @@ footer, .important-info,
     width: 100%;
 }
 
+.carousel-block__heading {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
 .carousel-block__heading .horizontal-line:after {
     position: absolute;
     right: 0;
@@ -1006,10 +1011,6 @@ footer .statistics {
     .carousel-block__carousel > .arrow-left,
     .carousel-block__carousel > .arrow-right {
         display: inline;
-    }
-
-    .carousel-block__heading .horizontal-line {
-        width: 80%;
     }
 
     .carousel-block .carousel-block__instances {
