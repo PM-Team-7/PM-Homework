@@ -22,15 +22,15 @@
 
 .topic {
     display: flex;
-    
+
     width: 100%;
     height: 1.5em;
 
     margin-top: 0;
-    
+
     justify-content: space-between;
     align-items: center;
-    
+
     background: url(../resources/icon/border.gif) center center repeat-x;
 }
 
@@ -68,9 +68,9 @@
     display: inline;
 
     padding-right: 1em;
-    
+
     background-color: #ffffff;
-    
+
     font-size: 1.5em;
 }
 
@@ -78,7 +78,7 @@
     display: inline;
 
     padding-left: 1em;
-    
+
     background-color: #ffffff;
 
     text-align: right;
@@ -133,7 +133,7 @@ a {
 
     margin-block-start: 1.5em;
     margin-block-end: 1.5em;
-    
+
     margin-inline-start: -10px;
     padding-inline-start: 30px;
 }
@@ -168,7 +168,7 @@ a {
     grid-template-areas: "logo . search basket"
                          "contacts contacts contacts contacts";
     grid-row-gap: 1em;
-    
+
     margin-top: 1.5em;
 
     flex-flow: column wrap;
@@ -283,11 +283,8 @@ a {
 
 
 .widget {
-    margin-top: 1.2em;
-    padding: 0.8em 0.4em;
-
-    border-radius: 0.8em;
-
+    padding: 1em;
+    border-radius: 0.5em;
     background-color: #e3e5eb;
     font-style: italic;
     text-align: center;
@@ -305,7 +302,7 @@ a {
     position: relative;
     overflow: hidden;
     height: 400px;
-    
+
     margin-top: 1.2em;
 
     border-radius: 0.8em;
@@ -348,7 +345,7 @@ a {
     position: absolute;
 
     bottom: 5%;
-    right: 7%;
+    right: 2%;
 
     user-select: none;
 }
@@ -380,7 +377,7 @@ a {
 
     border: 1px solid #adb5bd;
     border-radius: 0.25em;
-    margin-right: 0.5em;
+    margin-right: 0.1em;
 
     transition: all 1s cubic-bezier(0, 0, .5, 1);
 }
@@ -438,7 +435,7 @@ a {
 
     margin-block-start: 2em;
     margin-block-end: 2em;
-    
+
     margin-inline-start: -10px;
     margin-inline-end: 10px;
     padding-inline-start: 40px;
@@ -501,7 +498,7 @@ a {
 
 .buy--now .items > div a {
     display: block;
-    
+
     font-weight: 500;
     line-height: 1.2em;
 }
@@ -638,7 +635,7 @@ a {
 
     margin-block-start: 1.5em;
     margin-block-end: 1.5em;
-    
+
     margin-inline-start: -10px;
     margin-inline-end: 10px;
     padding-inline-start: 40px;
@@ -901,7 +898,15 @@ a {
         display: none !important;
     }
 
-    .header__top .login, .header__top .slash {
+    .header__top .login {
+        margin-right: 20px;
+    }
+
+    .header__top .login, .header__top .cabinet {
+        border-bottom: #4673ab 1.5px dotted;
+    }
+
+    .header__top .login {
         display: inline;
     }
 
@@ -916,6 +921,7 @@ a {
     }
 
     .header__main .contacts-inner {
+        line-height: 1.2;
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -939,7 +945,7 @@ a {
 
     .basket__top {
         margin-bottom: 0.5em;
-        padding: 1em;
+        padding: 0.75em 0.75em 0.75em 1.3em;
 
         background: linear-gradient(217deg, rgb(171, 155, 155), rgb(255, 255, 255), rgb(236, 220, 220)70.71%);
         border-radius: 5px;
@@ -955,8 +961,9 @@ a {
     }
 
     .basket__bottom a {
+        color: #000000;
         text-decoration: none;
-        border-bottom: #4673ab 1px dotted;
+        border-bottom: #4673ab 1.5px dotted;
     }
 
     .basket__bottom img {
@@ -986,7 +993,7 @@ a {
     .how--work__bottom.items {
         justify-content: space-between;
     }
-    
+
     .how--work__bottom > div {
         width: 20%;
     }
@@ -1076,24 +1083,24 @@ a {
     .numbers .items > div figure {
         padding-top: 23px;
     }
-    
+
     .numbers .items > div:nth-child(2) figure {
         padding-top: 40px;
     }
-    
+
     .numbers .items > div:nth-child(3) figure {
         padding-top: 20px;
     }
 
     .how--work__top > div {
         height: 3em;
-    
+
         padding-top: 1em;
     }
-    
+
     .how--work__top > div:nth-child(4) {
         padding-top: 1em;
-        
+
         line-height: 1em;
     }
 
@@ -1106,7 +1113,7 @@ a {
 
         width: 35px;
         height: 35px;
-    
+
         margin-left: 0;
     }
 
@@ -1193,7 +1200,7 @@ a {
         width: 70%;
 
         padding-left: 0.5em;
-    } 
+    }
 
     .search__bar input[type="button"] {
         width: 28%;
