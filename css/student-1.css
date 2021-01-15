@@ -194,7 +194,7 @@ footer .max-width, .important-info,
     content: "";
     display: block;
     height: 1px;
-    width: calc(100% - 50px);
+    width: calc(100% - 20px);
     background: rgba(0, 0, 0, 0.2);
     margin-left: 10px;
 }
