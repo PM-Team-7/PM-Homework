@@ -34,13 +34,16 @@
     background: url(../resources/icon/border.gif) center center repeat-x;
 }
 
-.topic .arrows {
+.topic .arrows, .carousel-block__heading .arrows {
     display: inline-flex;
     justify-content: space-between;
+
     width: 70px;
+
+    margin-left: 10px;
 }
 
-.topic .arrows figure {
+.topic .arrows figure, .carousel-block__heading .arrows figure {
     width: 30px;
     height: 30px;
 
@@ -52,8 +55,9 @@
     background: url(../resources/image/arr_psh.png) center center no-repeat;
 }
 
-.topic .arrows .prev {
+.topic .arrows .prev, .carousel-block__heading .arrows .prev {
     transform: rotate(180deg);
+    margin-right: 10px;
 }
 
 .white-line {
@@ -83,6 +87,11 @@
 
 /* Block 2 */
 
+
+a {
+    color: #4673ab;
+    cursor: pointer;
+}
 
 .header__top {
     margin-top: 1em;
@@ -444,7 +453,6 @@
     position: relative;
     z-index: 10;
 
-    width: 20%;
     height: 3em;
 
     padding: 1em;
@@ -470,6 +478,7 @@
 }
 
 .main-slider-wrap .slider .slide .details a {
+    display: block;
     text-decoration: none;
 }
 
@@ -504,7 +513,7 @@
 
 
 .brands img {
-    width: 100%;
+    display: none;
 }
 
 
@@ -544,6 +553,15 @@
 
 .block.widget .items > div p {
     font-weight: 500;
+}
+
+.widget .carousel-block__heading {
+    margin-top: 0;
+}
+
+.widget .carousel-block__heading .horizontal-line:after {
+    background: #fff;
+    margin: 0;
 }
 
 
@@ -747,6 +765,8 @@
     margin-right: .5em;
     padding: 1.5em 1em 0;
 
+    cursor: pointer;
+
     background-color: #e3e5eb;
     border-radius: 0.4em;
 
@@ -835,6 +855,11 @@
 
 .info .items > div {
     width: 48.5%;
+}
+
+.info .carousel-block__heading .horizontal-line::after {
+    width: 100%;
+    margin: 0;
 }
 
 
@@ -975,6 +1000,13 @@
     .how--work__bottom > figure:nth-child(4) {
         display: block;
     }
+
+    .brands .items > img:nth-child(-n+5) {
+        display: block;
+
+        width: 15%;
+        height: 50%;
+    }
 }
 
 /* Screen size 880px */
@@ -1094,6 +1126,13 @@
 
         vertical-align: top;
     }
+
+    .brands .items > img:nth-child(-n+7) {
+        display: block;
+
+        width: 10%;
+        height: 25%;
+    }
 }
 
 /* Screen size 1140px */
@@ -1166,5 +1205,12 @@
         background: #ff5816;
 
         color: #fff;
+    }
+
+    .brands .items > img {
+        display: block;
+
+        width: 9%;
+        height: 50%;
     }
 }
