@@ -71,64 +71,57 @@ main {
     margin-right: 10%;
 }
 
-/*!* Block 3 *!*/
+/*Block 2*/
 
-.important-info .news {
-    width: 25%;
-    margin-right: 25px;
+.selection-box select {
+    color: #4673ab;
+
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px dotted #4673ab;
+
+    padding: 5px;
+    width: 100px;
+    outline: none;
 }
 
-.important-info .news .item {
-    margin-bottom: 10px;
-}
-
-.important-info .news h2 {
-    display: inline;
-    width: 100%;
-    font-size: 1.3em;
-}
-
-.important-info .news .col {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.important-info .news .col .day {
-    text-align: center;
-    background-color: #fff;
-    height: 30px;
-    width: 40px;
-    border-radius: 10px;
-    color: #ff6837;
-    font-weight: 500;
-    font-size: 1.5em;
+.selection-box::before {
+    content: "\f13a";
     position: absolute;
-    padding-top: 7px;
-    top: 50px;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
 }
 
-.important-info .news a {
-    color: #4673ab;
-    text-decoration-style: dotted;
+.selection-box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-.important-info .news .col a {
-    font-weight: 500;
-    color: #4673ab;
-    text-decoration: none;
+.selection-box select option {
+    padding: 10px;
 }
 
-.important-info .news .col a:hover {
+select:active, select:hover, select:focus {
+    outline: none;
+    outline-color: #ff6837;
+}
+
+option:hover {
+    background-color: #ff6837;
     color: #ff6837;
-    text-decoration: underline;
 }
 
-.important-info .news .col p {
-    z-index: 3;
-    margin-top: 15px;
+option:hover {
+    box-shadow: 0 0 10px 100px #ff6837 inset;
 }
 
 /*!* Block 7, 8, 9 *!*/
@@ -605,13 +598,99 @@ footer .statistics {
 
 @media only screen and (min-width: 750px) {
 
-    .important-info .news {
-        width: 40%;
-        margin-right: 25px;
+    .important-info {
+        font-size: 0.8em;
+        margin-top: 25px;
     }
 
-    /* Block-7 */
+    .important-info .news .item {
+        margin: 15px 0 25px -12px;
+    }
 
+    .important-info .news .col {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .important-info .news {
+        height: 100%;
+        width: 32%;
+    }
+
+    .important-info .advert {
+        width: 65%;
+        height: 100%;
+        font-size: 1.2em;
+    }
+
+    .important-info .advert .widget {
+        height: 10%;
+        font-size: 0.65em;
+        padding: 1.5em 1em;
+    }
+
+    .important-info .news .col > img {
+        width: 85px;
+    }
+
+    .important-info .news .col .day {
+        text-align: center;
+        background-color: #fff;
+        height: 30px;
+        width: 40px;
+        border-radius: 10px;
+        color: #ff6837;
+        font-weight: 500;
+        font-size: 1.5em;
+        position: absolute;
+        padding-top: 7px;
+        top: 38px;
+    }
+
+    .important-info .news a {
+        color: #4673ab;
+        text-decoration-style: dotted;
+    }
+
+    .important-info .news .col a {
+        font-weight: 500;
+        color: #4673ab;
+        text-decoration: none;
+    }
+
+    .important-info .news .col a:hover {
+        color: #ff6837;
+        text-decoration: underline;
+    }
+
+    .important-info .news .col p {
+        z-index: 3;
+        margin-top: 5px;
+    }
+
+    .important-info .dotted {
+        border-top: 1.9px dotted rgba(0, 0, 0, 0.1);
+    }
+
+    .important-info .advert .main-slider-wrap {
+        height: 100%;
+    }
+
+    .important-info .news .item {
+        margin: 15px 0 25px -12px;
+    }
+
+    .important-info .news h2 {
+        display: inline;
+        font-weight: 400;
+        font-size: 1.5em;
+    }
+
+
+    /* Block-7 */
     .carousel-block__heading {
         margin-bottom: 3.5%;
     }
@@ -637,7 +716,6 @@ footer .statistics {
     }
 
     /*Block 18*/
-
     .pre-footer .max-width {
         width: 95%;
     }
@@ -775,10 +853,10 @@ footer .statistics {
         list-style-type: none;
         justify-content: center;
         width: 100%;
-        height: 40px;
-        margin: 10px auto;
+        height: 43px;
+        margin: 23px auto 0 auto;
         border-radius: 5px;
-        line-height: 1.2;
+        line-height: 1.35;
     }
 
     .catalog-navigation > li {
@@ -831,16 +909,45 @@ footer .statistics {
     }
 
     /*Block 7*/
-
     .important-info {
         width: 100%;
-        padding-top: 20px;
-        justify-content: center;
+        margin: 30px 0;
+        font-size: 1.05em;
     }
 
     .important-info .news {
-        width: 25%;
+        font-size: 0.8em;
+        width: 30%;
+        padding-top: 0.5%;
         margin-right: 25px;
+    }
+
+    .important-info .advert {
+        font-size: 1em;
+        width: 70%;
+    }
+
+    .important-info .advert .widget {
+        height: 10%;
+        font-size: 0.7em;
+        padding: 1.3em;
+    }
+
+    .important-info .advert .main-slider-wrap {
+        height: calc(90% - 30px);
+    }
+
+    .important-info .news .item {
+        margin: 15px 0 25px -12px;
+    }
+
+
+    .important-info .news .col > img {
+        width: 95px;
+    }
+
+    .important-info .news .col .day {
+        top: 38px;
     }
 
     .carousel-block .carousel-block__instances {
@@ -991,6 +1098,19 @@ footer .statistics {
         height: 15px;
     }
 
+    .important-info {
+        margin-top: 15px;
+    }
+
+    .important-info .news {
+        width: 23%;
+    }
+
+    .important-info .advert {
+        font-size: 0.95em;
+        width: 76%;
+    }
+
     /*Block 7*/
     .carousel-block__heading {
         margin-bottom: 2.5%;
@@ -1024,7 +1144,6 @@ footer .statistics {
     }
 
     /*Block 18*/
-
     .pre-footer__body > .col {
         width: 90%;
     }
