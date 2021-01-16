@@ -170,7 +170,7 @@ main {
     border-bottom: 1px dotted #4673ab;
 
     padding: 5px;
-    width: 100px;
+    width: 90px;
     outline: none;
 }
 
@@ -194,59 +194,6 @@ a {
 
 .header .items {
     align-items: center;
-}
-
-.change-city {
-    z-index: 9999;
-    position: absolute;
-    display: none;
-
-    max-width: 1140px;
-    height: 40vh;
-
-    margin-top: 1em;
-    padding: 1em;
-
-    border: 2px solid #ff5816;
-    background-color: white;
-    border-radius: 1em;
-}
-
-.change-city h2 {
-    margin-top: 0;
-
-    font-weight: 500;
-}
-
-.change-city ul {
-    display: block;
-    list-style: none;
-
-    height: 85%;
-    overflow-y: scroll;
-
-    margin-block-start: 1.5em;
-    margin-block-end: 1.5em;
-
-    margin-inline-start: -10px;
-    padding-inline-start: 30px;
-}
-
-.change-city ul li {
-    margin-bottom: 1em;
-}
-
-.change-city ul li::before {
-    content: "\2022";
-    font-weight: bold;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-    color: black;
-}
-
-.city:active + .change-city {
-    display: block;
 }
 
 .header__top .slash {
@@ -275,7 +222,7 @@ a {
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     color: #040d0d;
-    font-size: 1.8em;
+    font-size: 2.4em;
     font-weight: lighter;
 }
 
@@ -287,9 +234,10 @@ a {
 
     display: inline-block;
 
-    color: #ff6837;
     background: linear-gradient(217deg, rgb(171, 155, 155), rgb(255, 255, 255), rgb(236, 220, 220) 70.71%);
     border-radius: 5px;
+
+    color: #ff6837;
 }
 
 .logo__tagline {
@@ -326,6 +274,7 @@ a {
 }
 
 .contacts__phone .phone-main {
+    font-size: 1.25em;
     font-weight: 500;
 }
 
@@ -1523,6 +1472,10 @@ footer .statistics {
 
 @media only screen and (min-width: 750px) {
 
+    .header__main .logo {
+        font-size: 1.9em;
+    }
+
     .important-info {
         font-size: 0.8em;
         margin-top: 25px;
@@ -2178,11 +2131,6 @@ footer .statistics {
         font-size: 0.8em;
     }
 
-
-    .header__main {
-        grid-template-columns: 1fr 1.3fr 1fr 0.8fr;
-    }
-
     .basket {
         width: 100%;
     }
@@ -2373,6 +2321,10 @@ footer .statistics {
     .important-info .advert {
         font-size: 0.95em;
         width: 76%;
+    }
+
+    .header__main {
+        grid-template-columns: 1fr 1.3fr 1fr 0.8fr;
     }
 
     /*Block 7*/
