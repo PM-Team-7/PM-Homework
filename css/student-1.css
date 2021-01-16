@@ -231,10 +231,38 @@ footer .max-width,
 }
 
 .carousel-block .carousel-block__instance .overlay * {
-    z-index: 1;
+    z-index: 3;
+}
+
+.overlay-news, .overlay-rec, .overlay-sale {
     position: absolute;
-    top: -5px;
-    left: 10px;
+}
+
+.overlay-news {
+    top: -4px;
+    left: 20px;
+
+    width: 34px;
+    height: 43px;
+    background-image: url("../resources/icon/block-7-overlay.svg");
+}
+
+.overlay-rec {
+    top: -4px;
+    left: 20px;
+
+    width: 34px;
+    height: 43px;
+    background-image: url("../resources/icon/block-8-overlay.svg");
+}
+
+.overlay-sale {
+    top: -4px;
+    left: 20px;
+
+    width: 34px;
+    height: 43px;
+    background-image: url("../resources/icon/block-9-overlay.svg");
 }
 
 .carousel-block .carousel-block__instance .overlay .new,
@@ -243,22 +271,26 @@ footer .max-width,
 }
 
 .carousel-block .carousel-block__instance .overlay .new {
+    position: absolute;
+
     top: 8px;
-    left: 14px;
+    left: 4px;
 
     font-weight: 500;
     font-size: 0.8em;
 }
 
 .carousel-block .carousel-block__instance .overlay .percentage {
-    top: 0;
-    left: 17px;
-    font-size: 1.8em;
+    position: absolute;
+    top: 2px;
+    left: 7.5px;
+    font-size: 1.6em;
 }
 
 .carousel-block .carousel-block__instance .overlay .like-icon {
-    top: 2px;
-    left: 1.1em;
+    position: absolute;
+    top: 5px;
+    left: 7px;
 }
 
 .carousel-block .carousel-block__instance:nth-child(1) {
