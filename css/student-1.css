@@ -545,10 +545,97 @@ footer .statistics {
 
 @media only screen and (min-width: 750px) {
 
-    .important-info .news {
-        width: 40%;
-        margin-right: 25px;
+    .important-info {
+        font-size: 0.8em;
+        margin-top: 25px;
     }
+
+    .important-info .news .item {
+        margin: 15px 0 25px -12px;
+    }
+
+    .important-info .news .col {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .important-info .news {
+        height: 100%;
+        width: 32%;
+    }
+
+    .important-info .advert {
+        width: 65%;
+        height: 100%;
+        font-size: 1.2em;
+    }
+
+    .important-info .advert .widget {
+        height: 10%;
+        font-size: 0.65em;
+        padding: 1.5em 1em;
+    }
+
+    .important-info .news .col > img {
+        width: 85px;
+    }
+
+    .important-info .news .col .day {
+        text-align: center;
+        background-color: #fff;
+        height: 30px;
+        width: 40px;
+        border-radius: 10px;
+        color: #ff6837;
+        font-weight: 500;
+        font-size: 1.5em;
+        position: absolute;
+        padding-top: 7px;
+        top: 38px;
+    }
+
+    .important-info .news a {
+        color: #4673ab;
+        text-decoration-style: dotted;
+    }
+
+    .important-info .news .col a {
+        font-weight: 500;
+        color: #4673ab;
+        text-decoration: none;
+    }
+
+    .important-info .news .col a:hover {
+        color: #ff6837;
+        text-decoration: underline;
+    }
+
+    .important-info .news .col p {
+        z-index: 3;
+        margin-top: 5px;
+    }
+
+    .important-info .dotted {
+        border-top: 1.9px dotted rgba(0, 0, 0, 0.1);
+    }
+
+    .important-info .advert .main-slider-wrap {
+        height: 100%;
+    }
+
+    .important-info .news .item {
+        margin: 15px 0 25px -12px;
+    }
+
+    .important-info .news h2 {
+        display: inline;
+        font-weight: 400;
+        font-size: 1.5em;
+    }
+
 
     /* Block-7 */
     .carousel-block__heading {
@@ -713,10 +800,10 @@ footer .statistics {
         list-style-type: none;
         justify-content: center;
         width: 100%;
-        height: 40px;
-        margin: 23px auto;
+        height: 43px;
+        margin: 23px auto 0 auto;
         border-radius: 5px;
-        line-height: 1.2;
+        line-height: 1.35;
     }
 
     .catalog-navigation > li {
@@ -771,23 +858,26 @@ footer .statistics {
     /*Block 7*/
     .important-info {
         width: 100%;
-        height: 490px;
-        margin-bottom: 50px;
+        margin: 30px 0;
+        font-size: 1.05em;
     }
 
     .important-info .news {
-        width: 25%;
+        font-size: 0.8em;
+        width: 30%;
         padding-top: 0.5%;
         margin-right: 25px;
     }
 
     .important-info .advert {
-        width: 75%;
-        height: 100%;
+        font-size: 1em;
+        width: 70%;
     }
 
-    .important-info .advert .widget{
+    .important-info .advert .widget {
         height: 10%;
+        font-size: 0.7em;
+        padding: 1.3em;
     }
 
     .important-info .advert .main-slider-wrap {
@@ -798,57 +888,13 @@ footer .statistics {
         margin: 15px 0 25px -12px;
     }
 
-    .important-info .news h2 {
-        display: inline;
-        font-weight: 400;
-        font-size: 1.5em;
-    }
 
-    .important-info .news .col {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    .important-info .news .col > img {
+        width: 95px;
     }
 
     .important-info .news .col .day {
-        text-align: center;
-        background-color: #fff;
-        height: 30px;
-        width: 40px;
-        border-radius: 10px;
-        color: #ff6837;
-        font-weight: 500;
-        font-size: 1.5em;
-        position: absolute;
-        padding-top: 7px;
-        top: 50px;
-    }
-
-    .important-info .news a {
-        color: #4673ab;
-        text-decoration-style: dotted;
-    }
-
-    .important-info .news .col a {
-        font-weight: 500;
-        color: #4673ab;
-        text-decoration: none;
-    }
-
-    .important-info .news .col a:hover {
-        color: #ff6837;
-        text-decoration: underline;
-    }
-
-    .important-info .news .col p {
-        z-index: 3;
-        margin-top: 15px;
-    }
-
-    .important-info .dotted {
-        border-top: 1.9px dotted rgba(0, 0, 0, 0.1);
+        top: 38px;
     }
 
     .carousel-block .carousel-block__instances {
@@ -997,6 +1043,19 @@ footer .statistics {
     .nav__vertical-line {
         border-left: 1px solid rgba(255, 255, 255, 0.1);
         height: 15px;
+    }
+
+    .important-info {
+        margin-top: 15px;
+    }
+
+    .important-info .news {
+        width: 23%;
+    }
+
+    .important-info .advert {
+        font-size: 0.95em;
+        width: 76%;
     }
 
     /*Block 7*/
