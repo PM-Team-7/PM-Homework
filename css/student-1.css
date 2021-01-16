@@ -71,6 +71,59 @@ main {
     margin-right: 10%;
 }
 
+/*Block 2*/
+
+.selection-box select {
+    color: #4673ab;
+
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px dotted #4673ab;
+
+    padding: 5px;
+    width: 100px;
+    outline: none;
+}
+
+.selection-box::before {
+    content: "\f13a";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.selection-box:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.selection-box select option {
+    padding: 10px;
+}
+
+select:active, select:hover, select:focus {
+    outline: none;
+    outline-color: #ff6837;
+}
+
+option:hover {
+    background-color: #ff6837;
+    color: #ff6837;
+}
+
+option:hover {
+    box-shadow: 0 0 10px 100px #ff6837 inset;
+}
+
 /*!* Block 7, 8, 9 *!*/
 
 footer .max-width, .important-info,
