@@ -86,18 +86,13 @@ main {
     outline: none;
 }
 
-.selection-box:hover::before {
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
 .selection-box select option {
     padding: 10px;
 }
 
 /*!* Block 7, 8, 9 *!*/
 
-footer .max-width, .important-info,
+footer .max-width,
 .news .item, .pre-footer__link,
 .carousel-block__carousel,
 .carousel-block__heading,
@@ -113,6 +108,11 @@ footer .max-width, .important-info,
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.important-info {
+    display: flex;
+    justify-content: space-between;
 }
 
 .carousel-block__carousel > .arrow-left,
@@ -217,8 +217,8 @@ footer .max-width, .important-info,
 }
 
 .carousel-block .carousel-block__instance .overlay * {
-     z-index: 3;
- }
+    z-index: 3;
+}
 
 .overlay-news, .overlay-rec, .overlay-sale {
     position: absolute;
@@ -624,13 +624,16 @@ footer .statistics {
     }
 
     .important-info .advert {
-        width: 65%;
-        height: 100%;
+        display: flex;
+        align-content: stretch;
+        justify-content: space-between;
+        flex-direction: column;
+
         font-size: 1.2em;
+        width: 65%;
     }
 
     .important-info .advert .widget {
-        height: 10%;
         font-size: 0.65em;
         padding: 1.5em 1em;
     }
@@ -676,10 +679,6 @@ footer .statistics {
 
     .important-info .dotted {
         border-top: 1.9px dotted rgba(0, 0, 0, 0.1);
-    }
-
-    .important-info .advert .main-slider-wrap {
-        height: 100%;
     }
 
     .important-info .news .item {
@@ -925,19 +924,9 @@ footer .statistics {
         margin-right: 25px;
     }
 
-    .important-info .advert {
-        font-size: 1em;
-        width: 70%;
-    }
-
     .important-info .advert .widget {
-        height: 10%;
         font-size: 0.7em;
         padding: 1.3em;
-    }
-
-    .important-info .advert .main-slider-wrap {
-        height: calc(90% - 30px);
     }
 
     .important-info .news .item {
