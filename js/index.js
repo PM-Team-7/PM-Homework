@@ -1,0 +1,134 @@
+let topMenuBlock = document.getElementById('block-top-menu');
+let bottomMenuBlock = document.getElementById('block-bottom-menu');
+let newsBlock = document.getElementById('block-news');
+let buyingItemsBlock = document.getElementById('block-buying-items');
+
+const basketElements = document.getElementById('basket-elements');
+const basketPrice = document.getElementById('basket-price');
+
+const mainCarousel = document.getElementById('slider-main');
+let mainCarouselController = mainCarousel.querySelector('[data-slide="radio-controller');
+
+const carousels = document.querySelectorAll('.carousel-block');
+
+const initBasket = () => {
+    if (!validatePaymentSystem()) {
+        ITEMS.splice(0, ITEMS.length);
+        return;
+    }
+
+    basketElements.innerText = BASKET.elements;
+    basketPrice.innerText = BASKET.price;
+    basketPrice.title = BASKET.price;
+    document.getElementById('basket-currency').innerText = CURRENCY;
+
+    const basketClickHandler = (event) => {
+        if (event.target.tagName.toLowerCase() !== 'button' && event.target.dataset.Event !== 'buy-item') return;
+
+        event.preventDefault();
+        basketElements.innerText = BASKET.elements = BASKET.elements + 1;
+        basketPrice.innerText = basketPrice.title = BASKET.price = BASKET.price + Number(event.target.dataset.itemPrice);
+    };
+
+    document.addEventListener('click', basketClickHandler, false);
+};
+
+const initBlocks = () => {
+    let newTopMenu = transformTopMenu(TOP_MENU);
+    let newNews = transformNews(NEWS);
+    let newBuyingItems = transformBuyingItems(BUYING_RIGHT_NOW);
+
+    if (newTopMenu.length) {
+        topMenuBlock = replaceElement(createElement(newTopMenu, buildTopMenuView), topMenuBlock);
+    } else {
+        removeElement(topMenuBlock.querySelector('.placeholder'));
+    }
+
+    if (newNews.length) {
+        newsBlock = replaceElement(createElement(newNews, buildNewsView), newsBlock);
+    } else {
+        document.querySelector('.important-info').style.justifyContent = 'center';
+        removeElement(newsBlock);
+    }
+
+    if (newBuyingItems.length) {
+        buyingItemsBlock = replaceElement(createElement(newBuyingItems, buildBuyingItemsView), buyingItemsBlock);
+    } else {
+        removeElement(buyingItemsBlock);
+    }
+};
+
+const initCarousels = () => {
+    let newBottomMenu = transformButtomMenu(MENU);
+
+    if (newBottomMenu.length) {
+        bottomMenuBlock = replaceElement(createElement(newBottomMenu, buildBottomMenuView), bottomMenuBlock);
+    } else {
+        removeElement(topMenuBlock.querySelector('.placeholder'));
+    }
+
+    if (newBottomMenu.length > 10) initButtomMenu(bottomMenuBlock, newBottomMenu.length);
+
+    let carouselItems = transformItems(ITEMS);
+    
+    for (let j = 0; j < 3; j++) {
+        let carouselInner = carousels[j].querySelector('.carousel-block__instances');
+    
+        for (let i = 0; i < carouselItems[j].length; i++) {
+            carouselInner.innerHTML += buildItemView(carouselItems[j][i]);
+        }
+
+        initCarousel(carousels[j], carouselItems[j].length);
+    }
+    
+    let promotions = transformPromotions(PROMOTIONS);
+    
+    let carouselInner = carousels[3].querySelector('.carousel-block__instances');
+    
+    for (let i = 0; i < promotions.length; i++) {
+        carouselInner.innerHTML += buildPromotionView(promotions[i]);
+    }
+
+    initCarousel(carousels[3], promotions.length);
+    
+    let banners = transformBanner(BANNER);
+    let mainSlider = mainCarousel.querySelector('.slider');
+
+    if (banners) {
+        mainSlider.innerHTML += buildBannerView(banners[banners.length - 1]);
+
+        for (let i = 0; i < banners.length; i++) {
+            mainSlider.innerHTML += buildBannerView(banners[i]);
+        }
+
+        mainSlider.innerHTML += buildBannerView(banners[0]);
+
+        mainSlider.style.width = mainCarousel.clientWidth * (banners.length + 2) + 'px';
+        mainCarouselController = replaceElement(createElement(banners.length, buildBannerControllerView), mainCarouselController);
+        
+        initBanner(mainCarousel, banners.length);
+        removeElement(mainCarousel.querySelector('.placeholder'));
+    }
+    
+    window.addEventListener('resize', () => {
+        if (numberOfCarouselItems !== selectNumberOfCarouselItems(document.documentElement.clientWidth)) {
+            numberOfCarouselItems = selectNumberOfCarouselItems(document.documentElement.clientWidth);
+
+            for (let j = 0; j < 3; j++) {
+                initCarousel(carousels[j], carouselItems[j].length);
+            }
+
+            initCarousel(carousels[3], promotions.length);
+        }
+
+        mainSlider.style.width = mainCarousel.clientWidth * (banners.length + 2) + 'px';
+    });
+};
+
+const init = () => {
+    initBasket();
+    initBlocks();
+    initCarousels();
+};
+
+init();
