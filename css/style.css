@@ -441,7 +441,7 @@ a {
     z-index: 100;
 
     bottom: 5%;
-    right: 5%;
+    right: 10%;
 
     user-select: none;
 }
@@ -524,7 +524,7 @@ a {
 
     height: 100%;
 
-    padding: 10% 7%;
+    padding: 10% 10%;
 }
 
 .main-slider-wrap .slider .slide .slide__text p:nth-child(-n+2) {
@@ -562,6 +562,11 @@ a {
 }
 
 .main-slider-wrap .slider .slide .details {
+    position: absolute;
+
+    left: 10%;
+    bottom: 5%;
+
     width: 150px;
 
     margin-top: 3em;
@@ -1908,6 +1913,14 @@ footer .statistics {
 /* Screen size 980px*/
 
 @media only screen and (min-width: 980px) {
+
+    .main-slider__nav {
+        right: 7%;
+    }
+
+    .main-slider-wrap .slider .slide .details {
+        left: 7%;
+    }
 
     #block-bottom-menu {
         position: relative;
