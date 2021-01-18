@@ -9,11 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
           rel="stylesheet">
+    <script defer src="./js/config.js"></script>
+    <script defer src="./js/validation.js"></script>
+    <script defer src="./js/transformation.js"></script>
+    <script defer src="./js/elements.js"></script>
+    <script defer src="./js/elements_views.js"></script>
+    <script defer src="./js/carousel.js"></script>
+    <script defer src="./js/index.js"></script>
 </head>
 <body>
 
 <!--Block-1-->
-<nav class="nav">
+<nav id="block-top-menu" class="nav">
+    <div class="placeholder"></div>
     <div class="nav__nav-body_wide max-width">
         <div class="nav__dropdown dropdown">
             <a class="nav__link" href="https://homy.ru/catalog/">
@@ -147,8 +155,10 @@
                         </div>
                         <div class="contacts__email">
                             <a href="#">info@homy.ru</a><br>
-                            <img src="resources/icon/skype.svg" alt="Skype">	
-                            skype-on.06
+                            <div class="hide-after-1140">
+                                <img src="resources/icon/skype.svg" alt="Skype">	
+                                skype-on.06
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -169,10 +179,12 @@
                         <a class="icon basket--icon"></a>
                         <div class="hide-before-750">
                             <b>КОРЗИНА</b><br>
-                            <a href="#">100</a> / 4000р.
+                            <a id="basket-elements" href="#">0</a> / 
+                            <span id="basket-price">0</span>
+                            <span id="basket-currency"></span>
                         </div>
                     </div>
-                    <div class="basket__bottom hide-before-750">
+                    <div class="basket__bottom hide-before-750-flex">
                         <a href="#"><img src="./resources/icon/heart.svg" alt="">Избранное <span>7</span></a>
                         <a href="#"><img src="./resources/icon/comparison.svg" alt="">Сравнение <span>2</span></a>
                     </div>
@@ -181,69 +193,29 @@
         </header>
 
         <!--Block-3-->
-        <ul class="catalog-navigation hide-before-1140-flex">
-            <li>VOIP ОБОРУДОВАНИЕ</li>
-            <li>SKYPE ОБОРУДОВАНИЕ</li>
-            <li>GSM ОБОРУДОВАНИЕ</li>
-            <li>ВИДЕО-ОБОРУДОВАНИЕ</li>
-            <li>РАДИО И DECT ТЕЛЕФОНЫ</li>
-            <li>ГАРНИТУРЫ</li>
-            <li>ЭЛЕКТРОННЫЕ ЗАМКИ</li>
-            <li>ДОМОФОННЫЕ СИСТЕМЫ</li>
-            <li>СИСТЕМЫ ЗАПИСИ ТЕЛЕФОННЫХ РАЗГОВОРОВ</li>
-            <li>СЕТЕВОЕ ОБОРУДОВАНИЕ</li>
-            <img class="arrow-right" src="resources/icon/white-arrow-right.svg" alt="arrow-right">
-        </ul>
+        <div id="block-bottom-menu" class="hide-before-1140" data-slide="container">
+            <img class="arrow-left" src="resources/icon/white-arrow-right.svg" alt="arrow-left" data-slide="prev">
+            <div class="placeholder"></div>
+            <ul class="catalog-navigation hide-before-1140-flex" data-slide="container">
+                <li>VOIP ОБОРУДОВАНИЕ</li>
+                <li>SKYPE ОБОРУДОВАНИЕ</li>
+                <li>GSM ОБОРУДОВАНИЕ</li>
+                <li>ВИДЕО-ОБОРУДОВАНИЕ</li>
+                <li>РАДИО И DECT ТЕЛЕФОНЫ</li>
+                <li>ГАРНИТУРЫ</li>
+                <li>ЭЛЕКТРОННЫЕ ЗАМКИ</li>
+                <li>ДОМОФОННЫЕ СИСТЕМЫ</li>
+                <li>СИСТЕМЫ ЗАПИСИ ТЕЛЕФОННЫХ РАЗГОВОРОВ</li>
+                <li>СЕТЕВОЕ ОБОРУДОВАНИЕ</li>
+            </ul>
+            <img class="arrow-right" src="resources/icon/white-arrow-right.svg" alt="arrow-right" data-slide="next">
+        </div>
 
         <section class="important-info hide-before-750-flex">
 
             <!--Block-4-->
-            <div class="news col">
-                <h2>НОВОСТИ КОМПАНИИ</h2>
-                <hr>
-
-                <div class="item">
-                    <div class="col">
-                        <img src="resources/icon/block-4-news-1.svg" alt="background">
-                        <div class="day">15</div>
-                        <p>октября</p>
-                    </div>
-                    <div class="col">
-                        <a href="#">Новинка от "Элтекс" - точка доступа WEP-2ac</a>
-                        <p>Предприятие "Элтекс" запустило производство точки доступа WEP-2ac.</p>
-                    </div>
-                </div>
-
-                <hr class="dotted">
-
-                <div class="item">
-                    <div class="col">
-                        <img src="resources/icon/block-4-news-1.svg" alt="background">
-                        <div class="day">15</div>
-                        <p>октября</p>
-                    </div>
-                    <div class="col">
-                        <a href="#">Новинка от "Элтекс" - точка доступа WEP-2ac</a>
-                        <p>Предприятие "Элтекс" запустило производство точки доступа WEP-2ac.</p>
-                    </div>
-                </div>
-
-                <hr class="dotted">
-
-                <div class="item">
-                    <div class="col">
-                        <img src="resources/icon/block-4-news-1.svg" alt="background">
-                        <div class="day">15</div>
-                        <p>октября</p>
-                    </div>
-                    <div class="col">
-                        <a href="#">Новинка от "Элтекс" - точка доступа WEP-2ac</a>
-                        <p>Предприятие "Элтекс" запустило производство точки доступа WEP-2ac.</p>
-                    </div>
-                </div>
-
-                <hr class="dotted">
-                <a href="#">Все новости</a>
+            <div id="block-news" class="news col">
+               
             </div>
 
             <div class="col advert">
@@ -255,54 +227,27 @@
                 </div>
 
                 <!--Block-6-->
-                <div class="main-slider-wrap">
-                    <figure class="left-arr"></figure>
-                    <figure class="right-arr"></figure>
-                    <div class="main-slider__nav">
-                        <input class="nav-radio" type="radio" name="nav-btn" id="nav-btn-1" checked>
-                        <label for="nav-btn-1"></label>
-                        <input class="nav-radio" type="radio" name="nav-btn" id="nav-btn-2">
-                        <label for="nav-btn-2"></label>
-                        <input class="nav-radio" type="radio" name="nav-btn" id="nav-btn-3">
-                        <label for="nav-btn-3"></label>
-                        <input class="nav-radio" type="radio" name="nav-btn" id="nav-btn-4">
-                        <label for="nav-btn-4"></label>
+                <div id="slider-main" class="main-slider-wrap">
+                    <div class="placeholder">
+                        <div class="placeholder__message">
+                            Банер недоступен
+                        </div>
                     </div>
-                    <div class="slider">
-                        <div class="slide">
-                            <img src="./resources/image/block-6-background.png" alt="">
-                            <div class="slide__text">
-                                <p>РЕВОЛЮЦИОННОЕ РЕШЕНИЕ</p>
-                                <p>НА РЫНКЕ СРЕДИ СИСТЕМ ВКС!</p>
-                                <p>GVS MAINSTREAM 228 ОТ КОМПАНИИ GRANDSTREAM ЭТО:</p>
-                                <ul>
-                                    <li>9-ти сторонняя аудио/видео конференция без покупки доп. ПО</li>
-                                    <li>2 Мпикс камера CMOS с разрешением 1080р@15fps</li>
-                                    <li>Гигабитный порт, встроенный модуль WIFI и Bluetooth 4.0 Miracast</li>
-                                </ul>
-                                <div class="details">
-                                    <a href="#">ПОДРОБНЕЕ</a>
-                                </div>
-                            </div>
+                    <figure class="left-arr" data-slide="prev"></figure>
+                    <figure class="right-arr" data-slide="next"></figure>
+                    <div class="main-slider__nav" data-slide="radio-controller">
+                        
+                    </div>
+                    <div class="slider-wrap">
+                        <div class="slider" data-slide="container">
                         </div>
-                        <!--
-                        <div>
-                            ...
-                        </div>
-                        <div>
-                            ...
-                        </div>
-                        <div>
-                            ...
-                        </div>
-                        -->
                     </div>
                 </div>
             </div>
         </section>
 
         <!--Block-7-->
-        <div class="block carousel-block">
+        <div id="carousel-new-items" class="block carousel-block" data-block="carousel">
 
             <div class="carousel-block__heading">
                 <h2>НОВИНКИ</h2>
@@ -311,100 +256,28 @@
                 <div class="horizontal-line"></div>
 
                 <a href="#">Все новинки</a>
-                <div class="arrows hide-after-1140">
+                <div class="arrows hide-after-1140"  data-slide="controller">
                     <figure class="prev"></figure>
                     <figure class="next"></figure>
                 </div>
             </div>
 
             <div class="carousel-block__carousel">
-                <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
+                <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left" data-slide="prev">
 
-                <div class="carousel-block__instances">
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-news">
-                            <p class="new">NEW</p>
-                        </div>
-
-                        <img src="resources/image/block-7-img-1.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
+                <div class="carousel-block__inner">
+                    <div class="carousel-block__instances" data-slide="container">
+                        
                     </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-news">
-                            <p class="new">NEW</p>
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-2.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-news">
-                            <p class="new">NEW</p>
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-3.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-news">
-                            <p class="new" class="links-details">NEW</p>
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-4.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-                    </div>
-
                 </div>
 
-                <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
+                <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right"  data-slide="next">
             </div>
 
         </div>
 
         <!--Block-8-->
-        <div class="block carousel-block">
+        <div id="carousel-recommended-items" class="block carousel-block" data-block="carousel">
 
             <div class="carousel-block__heading">
                 <h2>РЕКОМЕНДУЕМ</h2>
@@ -413,100 +286,28 @@
                 <div class="horizontal-line"></div>
 
                 <a href="#">Все рекомендации</a>
-                <div class="arrows hide-after-1140">
+                <div class="arrows hide-after-1140"  data-slide="controller">
                     <figure class="prev"></figure>
                     <figure class="next"></figure>
                 </div>
             </div>
 
             <div class="carousel-block__carousel">
-                <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
+                <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left" data-slide="prev">
 
-                <div class="carousel-block__instances">
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-rec">
-                            <img class="like-icon" src="resources/icon/block-8-like.svg" alt="like">
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-3.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
+                <div class="carousel-block__inner">
+                    <div class="carousel-block__instances" data-slide="container">
+                        
                     </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-rec">
-                            <img class="like-icon" src="resources/icon/block-8-like.svg" alt="like">
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-4.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-rec">
-                            <img class="like-icon" src="resources/icon/block-8-like.svg" alt="like">
-                        </div>
-
-                        <img src="resources/image/block-7-img-1.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-rec">
-                            <img class="like-icon" src="resources/icon/block-8-like.svg" alt="like">
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-2.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-                    </div>
-
                 </div>
 
-                <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
+                <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right" data-slide="next">
             </div>
 
         </div>
 
         <!--Block-9-->
-        <div class=" block carousel-block">
+        <div id="carousel-sale-items" class=" block carousel-block" data-block="carousel">
 
             <div class="carousel-block__heading">
                 <h2>РАСПРОДАЖА</h2>
@@ -515,100 +316,28 @@
                 <div class="horizontal-line"></div>
 
                 <a href="#">Все товары</a>
-                <div class="arrows hide-after-1140">
+                <div class="arrows hide-after-1140"  data-slide="controller">
                     <figure class="prev"></figure>
                     <figure class="next"></figure>
                 </div>
             </div>
 
             <div class="carousel-block__carousel">
-                <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
+                <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left"  data-slide="prev">
 
-                <div class="carousel-block__instances">
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-sale">
-                            <p class="percentage">%</p>
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-3.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
+                <div class="carousel-block__inner">
+                    <div class="carousel-block__instances" data-slide="container">
+                        
                     </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-sale">
-                            <p class="percentage">%</p>
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-4.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-sale">
-                            <p class="percentage">%</p>
-                        </div>
-
-                        <img src="resources/image/block-7-img-1.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-
-                    </div>
-
-                    <div class="carousel-block__instance">
-
-                        <div class="overlay overlay-sale">
-                            <p class="percentage">%</p>
-                        </div>
-
-                        <img class="item-image" src="resources/image/block-7-img-2.png" alt="item">
-                        <a href="#">IP телефон Siemens Gigaset C530AIP</a>
-                        <p>Цена: <span class="bold">14 000р</span> <span class="crossed"> 15 600р</span></p>
-                        <div class="bottom">
-                            <button>
-                                <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                                КУПИТЬ
-                            </button>
-                            <a href="#" class="links-details">Подробнее</a>
-                        </div>
-                    </div>
-
                 </div>
 
-                <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
+                <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right" data-slide="next">
             </div>
 
         </div>
 
         <!--Block-10-->
-        <div class="block carousel-block">
+        <div id="carousel-promotions" class="block carousel-block" data-block="carousel">
             <div class="carousel-block__heading">
                 <h2>АКЦИИ</h2>
                 <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
@@ -616,130 +345,27 @@
                 <div class="horizontal-line"></div>
 
                 <a href="#">Все акции</a>
-                <div class="arrows hide-after-1140">
+                <div class="arrows hide-after-1140" data-slide="controller">
                     <figure class="prev"></figure>
                     <figure class="next"></figure>
                 </div>
             </div>
             <div class="carousel-block__carousel">
-                <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left">
+                <img class="arrow-left" src="resources/icon/arrow-left.svg" alt="arrow-left"  data-slide="prev">
 
-                <div class="carousel-block__instances">
-
-                    <div class="carousel-block__instance sales-instance">
-                        <a href="#">Название акции</a>
-                        <img class="item-image" src="resources/image/block-10-img-1.png" alt="item">
-                        <p>Важным преимушеством использования айпи телефона вместо обычного, является на порядок более
-                            низкая цена соединения.</p>
-                        <div class="timing">
-                            <p>Срок действия:</p>
-                            <div class="timing__count-down">
-                                <div class="timing__clock">
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                    <span class="colon">:</span>
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                    <span class="colon">:</span>
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                </div>
-                                <div class="timing__description">
-                                    <p>дней</p>
-                                    <p>часов</p>
-                                    <p>минут</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="centered" href="#">Подробнее</a>
+                <div class="carousel-block__inner">
+                    <div class="carousel-block__instances" data-slide="container">
+                        
                     </div>
-
-                    <div class="carousel-block__instance sales-instance">
-
-                        <a href="#">Название акции</a>
-                        <img class="item-image" src="resources/image/block-10-img-2.png" alt="item">
-                        <p>Важным преимушеством использования айпи телефона вместо обычного, является на порядок более
-                            низкая цена соединения.</p>
-
-                        <div class="timing">
-                            <p>Срок действия:</p>
-                            <p class="forever">БЕССРОЧНО</p>
-                        </div>
-                        <a class="centered" href="#">Подробнее</a>
-
-                    </div>
-
-                    <div class="carousel-block__instance sales-instance">
-
-                        <a href="#">Название акции</a>
-                        <img class="item-image" src="resources/image/block-10-img-3.png" alt="item">
-                        <p>Важным преимушеством использования айпи телефона вместо обычного, является на порядок более
-                            низкая цена соединения.</p>
-
-                        <div class="timing">
-                            <p>Срок действия:</p>
-                            <div class="timing__count-down">
-                                <div class="timing__clock">
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                    <span class="colon">:</span>
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                    <span class="colon">:</span>
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                </div>
-                                <div class="timing__description">
-                                    <p>дней</p>
-                                    <p>часов</p>
-                                    <p>минут</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="centered" href="#">Подробнее</a>
-
-                    </div>
-
-                    <div class="carousel-block__instance sales-instance">
-
-                        <a href="#">Название акции</a>
-                        <img class="item-image" src="resources/image/block-10-img-4.png" alt="item">
-                        <p>Важным преимушеством использования айпи телефона вместо обычного, является на порядок более
-                            низкая цена соединения.</p>
-
-                        <div class="timing">
-                            <p>Срок действия:</p>
-                            <div class="timing__count-down">
-                                <div class="timing__clock">
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                    <span class="colon">:</span>
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                    <span class="colon">:</span>
-                                    <span class="number-block">0</span>
-                                    <span class="number-block">0</span>
-                                </div>
-                                <div class="timing__description">
-                                    <p>дней</p>
-                                    <p>часов</p>
-                                    <p>минут</p>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="centered" href="#">Подробнее</a>
-
-                    </div>
-
                 </div>
 
-                <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right">
+                <img class="arrow-right" src="resources/icon/arrow-right.svg" alt="arrow-right" data-slide="next">
             </div>
 
         </div>
 
         <!--Block-11-->
-        <section class="block buy--now hide-before-750">
+        <section id="block-buying-items" class="block buy--now hide-before-750">
             <div class="carousel-block__heading">
                 <h2>ЧТО ПОКУПАЮТ ПРЯМО СЕЙЧАС</h2>
                 <div class="horizontal-line"></div>
@@ -765,7 +391,7 @@
         </section>
 
         <!--Block-12-->
-        <section class="block brands hide-before-750">
+        <section id="carousel-brands" class="block brands hide-before-750" data-block="carousel">
             <div class="carousel-block__heading">
                 <h2>НАШИ КЛЮЧЕВЫЕ БРЕНДЫ</h2>
                 <div class="horizontal-line"></div>
@@ -889,7 +515,7 @@
         </section>
 
         <!--Block-15-->
-        <section class="block numbers hide-before-750">
+        <section id="carousel-numbers" class="block numbers hide-before-750" data-block="carousel">
             <div class="carousel-block__heading">
                 <h2>МЫ В ЦИФРАХ</h2>
                 <div class="horizontal-line"></div>
