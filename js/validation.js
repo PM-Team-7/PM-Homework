@@ -87,8 +87,6 @@ const minorBannerProperties = [
 const importantItemProperties = [
     { name: 'type', validation: isString },
     { name: 'description', validation: isString },
-    { name: 'price', validation: isNumber },
-    { name: 'oldPrice', validation: isNumber },
     { name: 'currency', validation: (value) => {
         return isString(value) &&
         (CURRENCY == value.toUpperCase() || Object.keys(CURRENCY_EXCHANGE).includes(value.toUpperCase()));
@@ -98,6 +96,12 @@ const importantItemProperties = [
 ];
 
 const minorItemProperties = [
+    { name: 'price', validation: (value) => {
+        return isNumber(value) && Number(value) > 0
+    }, default: 0 },
+    { name: 'oldPrice', validation: (value) => {
+        return isNumber(value) && Number(value) > 0
+    }, default: 0 },
     { name: 'img', validation: isString, default: 'http://placehold.it/230x150/99cccc.gif&text=Item' },
 ];
 

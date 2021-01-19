@@ -145,15 +145,23 @@ const itemLabels = {
 };
 
 const buildItemView = (item) => {
+    let isPriceExists = true;
+
+    if (item.price == 0 || item.oldPrice == 0) {
+        item.price = '----';
+
+        isPriceExists = false;
+    }
+
     return `<div class="carousel-block__instance">
                 ${itemLabels[item.type]}
                 <img class="item-image" src="${item.img}" alt="item" onerror="this.src = 'http://placehold.it/230x150/99cccc.gif&text=Item'">
                 <a href="${item.url}">${item.description}</a>
-                <p>Цена: <span class="bold">${item.price}</span> <span class="crossed"> ${item.oldPrice}</span></p>
+                <p>Цена: <span class="bold">${item.price}</span> ${!isPriceExists ? '' : `<span class="crossed"> ${item.oldPrice}</span>`}</p>
                 <div class="bottom">
-                    <button data-event="buy-item" data-item-price="${item.price}" data-item-description="${item.description}">
-                        <img class="cart" src="resources/icon/cart.svg" alt="cart">
-                        КУПИТЬ
+                    <button data-event="buy-item" data-item-price="${item.price}" data-item-description="${item.description}" ${!isPriceExists ? 'class="button_disabled"' : ''}>
+                        ${!isPriceExists ? 'Не доступен' : `<img class="cart" src="resources/icon/cart.svg" alt="cart">
+                        КУПИТЬ`}
                     </button>
                     <a href="${item.url}" class="links-details">Подробнее</a>
                 </div>

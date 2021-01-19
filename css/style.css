@@ -88,6 +88,11 @@ main {
     pointer-events: none;
 }
 
+.button_disabled {
+    filter: opacity(50%);
+    pointer-events: none;
+}
+
 .white-line {
     background: url(../resources/icon/border_w.gif) center center repeat-x;
 }
