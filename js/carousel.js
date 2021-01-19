@@ -186,6 +186,7 @@ const initItemsCarousel = (carouselElement, elementsLength, maxElements = number
 
     const slidePrevHandler = (event) => {
         if (!counter) return;
+
         counter--;
 
         if (!counter) {
@@ -201,6 +202,7 @@ const initItemsCarousel = (carouselElement, elementsLength, maxElements = number
 
     const slideNextHandler = (event) => {
         if (counter + maxElements >= elementsLength) return;
+        
         counter++;
 
         if (counter + maxElements >= elementsLength) {

@@ -124,10 +124,10 @@ const initCarousels = () => {
             numberOfCarouselItems = selectNumberOfCarouselItems(document.documentElement.clientWidth);
 
             for (let j = 0; j < 3; j++) {
-                initItemsCarousel(carousels[j], carouselItems[j].length);
+                initItemsCarousel(carousels[j], carouselItems[j].length, numberOfCarouselItems);
             }
 
-            initItemsCarousel(carousels[3], promotions.length);
+            initItemsCarousel(carousels[3], promotions.length, numberOfCarouselItems);
 
             initCarousel(brandsCarousel, 9, 5);
             initCarousel(numbersCarousel, 6, 4);
