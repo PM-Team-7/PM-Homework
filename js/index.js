@@ -13,7 +13,9 @@ const carousels = document.querySelectorAll('.carousel-block');
 
 const initBasket = () => {
     if (!validatePaymentSystem()) {
-        ITEMS.splice(0, ITEMS.length);
+        if (typeof ITEMS !== 'undefined') {
+            ITEMS.splice(0, ITEMS.length);
+        }
         return;
     }
 
@@ -34,9 +36,9 @@ const initBasket = () => {
 };
 
 const initBlocks = () => {
-    let newTopMenu = transformTopMenu(TOP_MENU);
-    let newNews = transformNews(NEWS);
-    let newBuyingItems = transformBuyingItems(BUYING_RIGHT_NOW);
+    let newTopMenu = transformTopMenu(typeof TOP_MENU !== 'undefined' ? TOP_MENU : {});
+    let newNews = transformNews(typeof NEWS !== 'undefined' ? NEWS : []);
+    let newBuyingItems = transformBuyingItems(typeof BUYING_RIGHT_NOW !== 'undefined' ? BUYING_RIGHT_NOW : []);
 
     if (newTopMenu.length) {
         topMenuBlock = replaceElement(createElement(newTopMenu, buildTopMenuView), topMenuBlock);
@@ -59,19 +61,20 @@ const initBlocks = () => {
 };
 
 const initCarousels = () => {
-    let newBottomMenu = transformButtomMenu(MENU);
+    let newBottomMenu = transformButtomMenu(typeof MENU !== 'undefined' ? MENU : []);
 
     if (newBottomMenu.length) {
         bottomMenuBlock = replaceElement(createElement(newBottomMenu, buildBottomMenuView), bottomMenuBlock);
     } else {
-        removeElement(topMenuBlock.querySelector('.placeholder'));
+        removeElement(bottomMenuBlock.querySelector('.placeholder'));
     }
 
     if (newBottomMenu.length > 10) initButtomMenu(bottomMenuBlock, newBottomMenu.length);
 
-    let carouselItems = transformItems(ITEMS);
+    let carouselItems = transformItems(typeof ITEMS !== 'undefined' ? ITEMS : []);
     
     for (let j = 0; j < 3; j++) {
+
         let carouselInner = carousels[j].querySelector('.carousel-block__instances');
     
         for (let i = 0; i < carouselItems[j].length; i++) {
@@ -81,7 +84,7 @@ const initCarousels = () => {
         initCarousel(carousels[j], carouselItems[j].length);
     }
     
-    let promotions = transformPromotions(PROMOTIONS);
+    let promotions = transformPromotions(typeof PROMOTIONS !== 'undefined' ? PROMOTIONS : []);
     
     let carouselInner = carousels[3].querySelector('.carousel-block__instances');
     
@@ -91,10 +94,10 @@ const initCarousels = () => {
 
     initCarousel(carousels[3], promotions.length);
     
-    let banners = transformBanner(BANNER);
+    let banners = transformBanner(typeof BANNER !== 'undefined' ? BANNER : []);
     let mainSlider = mainCarousel.querySelector('.slider');
 
-    if (banners) {
+    if (banners.length) {
         mainSlider.innerHTML += buildBannerView(banners[banners.length - 1]);
 
         for (let i = 0; i < banners.length; i++) {
