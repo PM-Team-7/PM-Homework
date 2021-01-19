@@ -991,8 +991,8 @@ footer .max-width, .important-info,
     font-style: normal;
 }
 
-.block.widget .topic h2 {
-    background-color: #e3e5eb;
+.block.widget .carousel-block__heading {
+    margin-top: 0;
 }
 
 .block.widget .items > div {
