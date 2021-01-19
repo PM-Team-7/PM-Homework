@@ -47,6 +47,13 @@ const initBanner = (bannerElement, elementsLength) => {
     const prevArrow = bannerElement.querySelector('[data-slide="prev"]');
     const nextArrow = bannerElement.querySelector('[data-slide="next"]');
 
+    if (elementsLength === 1) {
+        controller.style.display = 'none';
+        prevArrow.style.display = 'none';
+        nextArrow.style.display = 'none';
+        return;
+    }
+
     const container = bannerElement.querySelector('[data-slide="container"]');
 
     let counter = 1;
@@ -86,7 +93,7 @@ const initBanner = (bannerElement, elementsLength) => {
     const controllerChangeHandler = (event) => {
         event.stopPropagation();
 
-        container.style.transition = 'none';
+        container.style.transition = `transform 0.4s`;
         counter = +event.target.value;
         moveSlides();
     };

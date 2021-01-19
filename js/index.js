@@ -114,7 +114,7 @@ const initCarousels = () => {
 
         mainSlider.style.width = mainCarousel.clientWidth * (banners.length + 2) + 'px';
         mainCarouselController = replaceElement(createElement(banners.length, buildBannerControllerView), mainCarouselController);
-        
+
         initBanner(mainCarousel, banners.length);
         removeElement(mainCarousel.querySelector('.placeholder'));
     }

@@ -54,8 +54,6 @@ const transformNews = (news) => {
 const transformBanner = (banner) => {
     let correctElements = selectValidElements(banner, importantBannerProperties, minorBannerProperties);
 
-    if (correctElements.length < 2) return [];
-
     return correctElements.sort((a, b) => a.order - b.order).slice(0, 6);
 };
 
