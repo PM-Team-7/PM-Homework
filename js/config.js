@@ -11,94 +11,81 @@ const BASKET = {
 };
 
 const TOP_MENU = {
-    catalog: {
-        order: 1,
-        title: 'Каталог',
-        submenu: [
-            {
-                order: 1,
-                title: 'VOIP оборудование',
-                url: 'voip_equipment.html',
-            },
-            {
-                order: 2,
-                title: 'GSM оборудование',
-                url: 'gsm_equipment.html',
-            },
-        ],
-    },
-    about_company: {
+    ti: {
         order: 2,
-        title: 'О компании',
+        title: 'Второй',
         submenu: [
             {
                 order: 1,
-                title: 'VOIP оборудование',
+                title: 'Первый',
                 url: 'voip_equipment.html',
             },
             {
                 order: 2,
-                title: 'GSM оборудование',
+                title: 'Второй',
                 url: 'gsm_equipment.html',
             },
         ],
     },
-    payment_delivery: {
+    pa: {
         order: 3,
-        title: 'Payment and delivery',
+        title: 'Третий',
         url: 'payment_delivery.html',
     },
-    catalog: {
+    razniye: {
         order: 1,
-        title: 'Каталог',
+        title: 'Первый',
         submenu: [
             {
                 order: 1,
-                title: 'VOIP оборудование',
+                title: 'Первый',
                 url: 'voip_equipment.html',
             },
             {
                 order: 2,
-                title: 'GSM оборудование',
+                title: 'Второй',
                 url: 'gsm_equipment.html',
             },
         ],
     },
-    catalo: {
+    punkti: {
         order: 9,
-        title: 'Каталог',
+        title: 'Шестой',
         submenu: [
             {
-                order: 1,
-                title: 'VOIP оборудование',
-                url: 'voip_equipment.html',
+                order: 2,
+                title: 'Второй',
+                url: 'gsm_equipment.html',
             },
             {
-                order: 2,
-                title: 'GSM оборудование',
-                url: 'gsm_equipment.html',
+                order: 1,
+                title: 'Первый',
+                url: 'voip_equipment.html',
             },
         ],
     },
-    catal: {
+    menu: {
         order: 10,
-        title: 'Каталог',
+        title: 'Седьмой',
         submenu: [
             {
                 order: 1,
-                title: 'VOIP оборудование',
+                title: 'Первый',
                 url: 'voip_equipment.html',
             },
             {
                 order: 2,
-                title: 'GSM оборудование',
+                title: 'Второй',
                 url: 'gsm_equipment.html',
             },
         ],
     },
-    about_company: {
+    kruto: {
         order: 2,
-        title: 'О компании',
+        title: 'Битый',
+    },
+    da: {
+        title: 'Битый',
         submenu: [
             {
                 order: 1,
@@ -112,67 +99,58 @@ const TOP_MENU = {
             },
         ],
     },
-    about_compa: {
-        order: 6,
-        title: 'О компании',
+    boje: {
+        order: 11,
+        title: 'Восьмой',
         submenu: [
             {
-                order: 1,
-                title: 'VOIP оборудование',
+                order: 2,
+                title: 'Второй',
                 url: 'voip_equipment.html',
             },
             {
-                order: 2,
-                title: 'GSM оборудование',
+                order: 3,
+                title: 'Третий',
+                url: 'voip_equipment.html',
+            },
+            {
+                order: 1,
+                title: 'Первый',
+                url: 'voip_equipment.html',
+            },
+            {
+                title: 'Битый',
                 url: 'gsm_equipment.html',
             },
         ],
     },
-    about_comp: {
-        order: 7,
-        title: 'О компании',
+    kak: {
+        title: 'Битый',
         submenu: [
             {
                 order: 1,
-                title: 'VOIP оборудование',
+                title: 'Первый',
                 url: 'voip_equipment.html',
             },
             {
                 order: 2,
-                title: 'GSM оборудование',
+                title: 'Второй',
                 url: 'gsm_equipment.html',
             },
         ],
     },
-    about_com: {
-        order: 8,
-        title: 'О компании',
-        submenu: [
-            {
-                order: 1,
-                title: 'VOIP оборудование',
-                url: 'voip_equipment.html',
-            },
-            {
-                order: 2,
-                title: 'GSM оборудование',
-                url: 'gsm_equipment.html',
-            },
-        ],
-    },
-    payment_delivery: {
+    mnogo: {
         order: 3,
-        title: 'Payment and delivery',
-        url: 'payment_delivery.html',
+        title: 'Битый',
     },
-    payment_sho: {
+    nado: {
         order: 4,
-        title: 'Payment and delivery',
+        title: 'Четвертый',
         url: 'payment_delivery.html',
     },
-    payment_hto: {
+    pridumivat: {
         order: 5,
-        title: 'Payment and delivery',
+        title: 'Пятый',
         url: 'payment_delivery.html',
     },
 };
@@ -180,92 +158,89 @@ const TOP_MENU = {
 const MENU = [
     {
         order: 1,
-        title: 'VOIP ОБОРУДОВАНИЕ',
-        url: 'voip_equipment.html',
+        title: 'Битый',
     },
     {
         order: 2,
-        title: 'SKYPE оборудование',
+        title: 'Первый',
         url: 'skype_equipment.html',
     },
     {
         order: 3,
-        title: 'GSM оборудование',
+        title: 'Второй',
         url: 'gsm_equipment.html',
     },
     {
         order: 4,
-        title: 'VIDEO оборудование',
+        title: 'Трейтий',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 5,
+        title: 'Четвертый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 7,
+        title: 'Шестой',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        title: 'Битый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 8,
+        title: 'Седьмой',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 9,
+        title: 'Восьмой',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 10,
+        title: 'Девятый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 11,
+        title: 'Десятый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 17,
+        title: 'Пятнадцатый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 14,
+        title: 'Тринадцатый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 6,
+        title: 'Пятый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 15,
+        title: 'Четырнадцатый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 16,
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 12,
+        title: 'Одиннадцатый',
         url: 'video_equipment.html',
     },
     {
-        order: 4,
-        title: 'VIDEO оборудование',
+        order: 13,
+        title: 'ДВенадцатй',
         url: 'video_equipment.html',
     },
 ];
@@ -273,30 +248,50 @@ const MENU = [
 const NEWS = [
     {
         date: '2021/01/01',
-        title: 'Новинка от «Элтекс» - точка доступа WEP',
+        title: 'Битый',
         description: 'Предприятие «Элтекс» запустило производство точки доступа WEP-2ac.',
-        img: 'https://same_url.jpg',
-        url: 'voip_equipment.html',
     },
     {
         date: '2020/12/25',
-        title: 'Новинка от компании Grandstream!',
+        title: 'Рандом 4',
         description: 'Скоро в продаже мощный маршрутизатор GWN7000!',
         img: 'https://same_url.jpg',
         url: 'voip_equipment.html',
     },
     {
+        date: '2021/10/14',
+        title: 'Рандом 3',
+        description: 'Уже скоро в продаже!',
+        img: 'https://same_url.jpg',
+        url: 'voip_equipment.html',
+    },
+    {
+        title: 'Битый',
+        description: 'Уже скоро в продаже!',
+        img: 'https://same_url.jpg',
+        url: 'voip_equipment.html',
+    },
+    {
         date: '2021/01/14',
-        title: 'WiFi точка доступа от компании Grandstream!',
+        title: 'Рандом 1',
+        description: 'Уже скоро в продаже!',
+        img: 'https://same_url.jpg',
+        url: 'voip_equipment.html',
+    },
+    {
+        date: '2021/04/14',
+        title: 'Рандом 2',
         description: 'Уже скоро в продаже!',
         img: 'https://same_url.jpg',
         url: 'voip_equipment.html',
     },
 ];
 
+
+// Must be four
 const BANNER = [
     {
-        order: 1,
+        order: 2,
         img: 'https://same_url.jpg',
         url: 'voip_equipment.html',
     },
@@ -306,12 +301,19 @@ const BANNER = [
         url: 'voip_equipment.html',
     },
     {
-        order: 1,
+        order: 3,
+        img: 'https://same_url.jpg',
+    },
+    {
+        order: 5,
+        url: 'voip_equipment.html',
+    },
+    {
+        order: 4,
         img: 'https://same_url.jpg',
         url: 'voip_equipment.html',
     },
     {
-        order: 1,
         img: 'https://same_url.jpg',
         url: 'voip_equipment.html',
     },
@@ -321,7 +323,7 @@ const BANNER = [
 const ITEMS = [
     {
         type: 'new',
-        description: 'Пятый',
+        description: 'Первый',
         img: 'https://same_url.jpg',
         price: '1000',
         oldPrice: '1100',
@@ -331,32 +333,11 @@ const ITEMS = [
     },
     {
         type: 'new',
-        description: 'Шестой',
+        description: 'Битый',
         img: 'https://same_url.jpg',
         price: '1000',
         oldPrice: '1100',
-        currency: 'UAH',
         date: '2021/01/01',
-        url: 'new_items/item1.html',
-    },
-    {
-        type: 'new',
-        description: 'Четвертый',
-        img: 'https://same_url.jpg',
-        price: '1000',
-        oldPrice: '1100',
-        currency: 'UAH',
-        date: '2021/01/20',
-        url: 'new_items/item1.html',
-    },
-    {
-        type: 'new',
-        description: 'Третий',
-        img: 'https://same_url.jpg',
-        price: '1000',
-        oldPrice: '1100',
-        currency: 'RUB',
-        date: '2021/01/30',
         url: 'new_items/item1.html',
     },
     {
@@ -366,17 +347,7 @@ const ITEMS = [
         price: '1000',
         oldPrice: '1100',
         currency: 'UAH',
-        date: '2021/02/30',
-        url: 'new_items/item1.html',
-    },
-    {
-        type: 'new',
-        description: 'Первый',
-        img: 'https://same_url.jpg',
-        price: '1000',
-        oldPrice: '1100',
-        currency: 'RUB',
-        date: '2021/03/10',
+        date: '2021/01/01',
         url: 'new_items/item1.html',
     },
     {
@@ -421,13 +392,12 @@ const ITEMS = [
     },
     {
         type: 'recommended',
-        description: 'Восьмой',
+        description: 'Битый',
         img: 'https://same_url.jpg',
         price: '1100',
         oldPrice: '1100',
         currency: 'RUB',
         date: '2020/12/25',
-        url: 'new_items/item.html',
     },
     {
         type: 'recommended',
@@ -450,8 +420,7 @@ const ITEMS = [
         url: 'new_items/item.html',
     },
     {
-        type: 'recommended',
-        description: 'Девятый',
+        description: 'Битый',
         img: 'https://same_url.jpg',
         price: '1100',
         oldPrice: '1200',
@@ -481,7 +450,7 @@ const ITEMS = [
     },
     {
         type: 'sale',
-        description: 'Четверый',
+        description: 'Недоступен',
         img: 'https://same_url.jpg',
         price: '100',
         currency: 'USD',
@@ -500,10 +469,8 @@ const ITEMS = [
     },
     {
         type: 'sale',
-        description: 'Третий',
+        description: 'Недоступен',
         img: 'https://same_url.jpg',
-        price: '100',
-        oldPrice: '800',
         currency: 'USD',
         date: '2021/01/13',
         url: 'https://same_url/item.html',
@@ -520,17 +487,29 @@ const PROMOTIONS = [
         time_action: '1d 2h 20m',
     },
     {
-        title: 'Название акции 2',
+        title: 'Битый',
         description: 'IP телефон Siemens Gigaset C530A IP',
         img: 'https://same_url.jpg',
         url: 'https://same_url/item.html',
-        time_action: '1d 2h 20m',
+        time_action: '1d 2h m',
     },
     {
         title: 'Название акции 2',
         description: 'IP телефон Siemens Gigaset C530A IP',
         img: 'https://same_url.jpg',
         url: 'https://same_url/item.html',
+    },
+    {
+        title: 'Битый',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+    },
+    {
+        title: 'Название акции 3',
+        description: 'IP телефон Siemens Gigaset C530A IP',
+        img: 'https://same_url.jpg',
+        url: 'https://same_url/item.html',
+        time_action: '1d 2h 20m',
     },
 ];
 
@@ -546,23 +525,21 @@ const BUYING_RIGHT_NOW = [
         url: 'https://same_url/item.html',
     },
     {
-        title: 'Название товара 2',
+        title: 'Битый',
+        img: 'https://same_url.jpg',
+    },
+    {
+        title: 'Название товара 3',
         img: 'https://same_url.jpg',
         url: 'https://same_url/item.html',
     },
     {
-        title: 'Название товара 2',
+        title: 'Название товара 5',
         img: 'https://same_url.jpg',
         url: 'https://same_url/item.html',
     },
     {
-        title: 'Название товара 2',
-        img: 'https://same_url.jpg',
-        url: 'https://same_url/item.html',
-    },
-    {
-        title: 'Название товара 2',
-        img: 'https://same_url.jpg',
+        title: 'Название товара 4',
         url: 'https://same_url/item.html',
     },
 ];
