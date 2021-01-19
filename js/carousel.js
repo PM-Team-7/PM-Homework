@@ -1,11 +1,12 @@
-const initButtomMenu = (buttomMenu, elementsLength) => {
-    const prevArrow = buttomMenu.querySelector('[data-slide="prev"]');
-    const nextArrow = buttomMenu.querySelector('[data-slide="next"]');
+const initCarousel = (carousel, elementsLength, maxElements) => {
+    const prevArrow = carousel.querySelector('[data-slide="prev"]');
+    const nextArrow = carousel.querySelector('[data-slide="next"]');
 
-    const container = buttomMenu.querySelector('[data-slide="container"]');
+    const container = carousel.querySelector('[data-slide="container"]');
 
     let counter = 0;
-    const moveSlides = () => container.style.transform = 'translateX(' + ( -10 * counter ) + '%)';
+    container.style.transform = 'translateX(0%)';
+    const moveSlides = () => container.style.transform = 'translateX(' + ( -100 * counter / maxElements ) + '%)';
 
     prevArrow.classList.add('arrow_disabled');
 
@@ -24,11 +25,11 @@ const initButtomMenu = (buttomMenu, elementsLength) => {
     };
 
     const slideNextHandler = (event) => {
-        if (counter + 10 >= elementsLength) return;
+        if (counter + maxElements >= elementsLength) return;
         counter++;
         moveSlides();
 
-        if (counter + 10 >= elementsLength) {
+        if (counter + maxElements >= elementsLength) {
             nextArrow.classList.add('arrow_disabled');
         } else {
             nextArrow.classList.remove('arrow_disabled');
@@ -139,7 +140,7 @@ const selectNumberOfCarouselItems = (width) => {
 
 let numberOfCarouselItems = selectNumberOfCarouselItems(document.documentElement.clientWidth);
 
-const initCarousel = (carouselElement, elementsLength, maxElements = numberOfCarouselItems) => {
+const initItemsCarousel = (carouselElement, elementsLength, maxElements = numberOfCarouselItems) => {
     if (!elementsLength) {
         carouselElement.style.display = 'none';
         return;
@@ -184,9 +185,9 @@ const initCarousel = (carouselElement, elementsLength, maxElements = numberOfCar
             controller.querySelector('.prev').classList.add('arrow_disabled');
             prevArrow.style.visibility = 'hidden';
         } else {
-            controller.querySelector('.next').classList.remove('arrow_disabled');
             nextArrow.style.visibility = 'visible';
         }
+        controller.querySelector('.next').classList.remove('arrow_disabled');
 
         container.style.transform = 'translateX(' + (-size * counter) + '%)';
     };
@@ -199,9 +200,9 @@ const initCarousel = (carouselElement, elementsLength, maxElements = numberOfCar
             controller.querySelector('.next').classList.add('arrow_disabled');
             nextArrow.style.visibility = 'hidden';
         } else {
-            controller.querySelector('.prev').classList.remove('arrow_disabled');
             prevArrow.style.visibility = 'visible';
         }
+        controller.querySelector('.prev').classList.remove('arrow_disabled');
 
         container.style.transform = 'translateX(' + (-size * counter) + '%)';
     };

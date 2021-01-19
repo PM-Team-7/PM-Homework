@@ -970,8 +970,13 @@ footer .max-width, .important-info,
 /* Block 12 */
 
 
-.brands img {
-    display: none;
+.brands .items {
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brands .container-wrap {
+    overflow: hidden;
 }
 
 
@@ -1150,43 +1155,46 @@ footer .max-width, .important-info,
 
 /* Block 15 */
 
-
-.numbers .items > div {
-    display: none;
-    width: 20%;
-
-    text-align: center;
-    font-weight: 500;
+.numbers .container-wrap {
+    overflow: hidden;
+    width: 95vw;
 }
 
-.numbers .items > div:nth-child(-n+4) {
-    display: block;
+.numbers .items {
+    transition: transform 0.3s ease-in-out;
+}
+
+.numbers .items > div {
+    margin: 0 1.875vw;
+    text-align: center;
+    font-weight: 500;
+    transition: transform 0.3s ease-in-out;
 }
 
 .numbers .items > div figure {
-    width: 150px;
-    height: 150px;
+    width: 20vw;
+    height: 20vw;
 
     margin: 0 auto 16px;
-    padding-top: 35px;
+    padding-top: 4vw;
 
     border: 2px solid #e3e5eb;
     border-radius: 50%;
 
     font-weight: bold;
-    font-size: 5em;
+    font-size: 12vw;
     text-align: center;
     color: #ff5816;
 }
 
 .numbers .items > div:nth-child(2) figure {
-    padding-top: 50px;
-    font-size: 3em;
+    padding-top: 6vw;
+    font-size: 7vw;
 }
 
 .numbers .items > div:nth-child(3) figure {
-    padding-top: 30px;
-    font-size: 2em;
+    padding-top: 4vw;
+    font-size: 4vw;
 }
 
 .numbers .items > div:nth-child(2n) figure {
@@ -1753,10 +1761,9 @@ footer .statistics {
         display: block;
     }
 
-    .brands .items > img:nth-child(-n+5) {
-        display: block;
-
-        width: 15%;
+    .brands .items > img {
+        margin: 0 1%;
+        width: 18%;
         height: 50%;
     }
 
@@ -2129,30 +2136,31 @@ footer .statistics {
         width: 23%;
     }
 
-    .block.buy--now .items > div:nth-child(-n+4) {
-        display: block;
+    .numbers .items {
+        justify-content: space-between;
     }
 
     .numbers .items > div {
         display: block;
+        margin: 0;
         width: 16%;
     }
-
+    
     .numbers .items > div figure {
         width: 125px;
         height: 125px;
-    }
-
-    .numbers .items > div figure {
+        font-size: 5em;
         padding-top: 23px;
     }
 
     .numbers .items > div:nth-child(2) figure {
         padding-top: 40px;
+        font-size: 3em;
     }
 
     .numbers .items > div:nth-child(3) figure {
         padding-top: 20px;
+        font-size: 2em;
     }
 
     .how--work__top > div {
@@ -2195,9 +2203,7 @@ footer .statistics {
         vertical-align: top;
     }
 
-    .brands .items > img:nth-child(-n+7) {
-        display: block;
-
+    .brands .items > img {
         width: 10%;
         height: 25%;
     }
@@ -2292,8 +2298,6 @@ footer .statistics {
     }
 
     .brands .items > img {
-        display: block;
-
         width: 9%;
         height: 50%;
     }

@@ -9,6 +9,9 @@ const basketPrice = document.getElementById('basket-price');
 const mainCarousel = document.getElementById('slider-main');
 let mainCarouselController = mainCarousel.querySelector('[data-slide="radio-controller');
 
+const brandsCarousel = document.getElementById('carousel-brands');
+const numbersCarousel = document.getElementById('carousel-numbers');
+
 const carousels = document.querySelectorAll('.carousel-block');
 
 const initBasket = () => {
@@ -69,7 +72,7 @@ const initCarousels = () => {
         removeElement(bottomMenuBlock.querySelector('.placeholder'));
     }
 
-    if (newBottomMenu.length > 10) initButtomMenu(bottomMenuBlock, newBottomMenu.length);
+    if (newBottomMenu.length > 10) initCarousel(bottomMenuBlock, newBottomMenu.length, 10);
 
     let carouselItems = transformItems(typeof ITEMS !== 'undefined' ? ITEMS : []);
     
@@ -81,7 +84,7 @@ const initCarousels = () => {
             carouselInner.innerHTML += buildItemView(carouselItems[j][i]);
         }
 
-        initCarousel(carousels[j], carouselItems[j].length);
+        initItemsCarousel(carousels[j], carouselItems[j].length);
     }
     
     let promotions = transformPromotions(typeof PROMOTIONS !== 'undefined' ? PROMOTIONS : []);
@@ -92,7 +95,10 @@ const initCarousels = () => {
         carouselInner.innerHTML += buildPromotionView(promotions[i]);
     }
 
-    initCarousel(carousels[3], promotions.length);
+    initItemsCarousel(carousels[3], promotions.length);
+
+    initCarousel(brandsCarousel, 9, 5);
+    initCarousel(numbersCarousel, 6, 4);
     
     let banners = transformBanner(typeof BANNER !== 'undefined' ? BANNER : []);
     let mainSlider = mainCarousel.querySelector('.slider');
@@ -118,10 +124,13 @@ const initCarousels = () => {
             numberOfCarouselItems = selectNumberOfCarouselItems(document.documentElement.clientWidth);
 
             for (let j = 0; j < 3; j++) {
-                initCarousel(carousels[j], carouselItems[j].length);
+                initItemsCarousel(carousels[j], carouselItems[j].length);
             }
 
-            initCarousel(carousels[3], promotions.length);
+            initItemsCarousel(carousels[3], promotions.length);
+
+            initCarousel(brandsCarousel, 9, 5);
+            initCarousel(numbersCarousel, 6, 4);
         }
 
         mainSlider.style.width = mainCarousel.clientWidth * (banners.length + 2) + 'px';
