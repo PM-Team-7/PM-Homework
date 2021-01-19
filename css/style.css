@@ -2136,6 +2136,10 @@ footer .statistics {
         width: 23%;
     }
 
+    .numbers .container-wrap {
+        width: 100%;
+    }
+
     .numbers .items {
         justify-content: space-between;
     }
