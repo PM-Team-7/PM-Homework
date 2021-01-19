@@ -8,6 +8,9 @@ const transformTopMenu = (topMenu) => {
     for (let element in topMenu) {
         if (validateObject(topMenu[element], importantTopMenuProperties)) {
             if (topMenu[element].hasOwnProperty('submenu')) {
+                topMenu[element]['submenu'] = topMenu[element]['submenu'].filter((item) => {
+                    return validateObject(item, importantTopMenuProperties) && item.hasOwnProperty('url');
+                });
                 topMenu[element]['submenu'].sort((a, b) => a.order - b.order);
                 menu.push(topMenu[element]);
             } else if (topMenu[element].hasOwnProperty('url') && isString(topMenu[element]['url'])) {
